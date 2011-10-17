@@ -1,0 +1,19 @@
+#!/usr/bin/perl -w
+# get_fullpath.pl --- 
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 12 Oct 2011
+# Version: 0.01
+
+use warnings;
+use strict;
+use DirHandle;
+use Cwd 'abs_path';
+
+my $fh =DirHandle->new($ARGV[0]||".");
+my @files=$fh->read;
+undef $fh;
+
+foreach (@files) {
+    print "\t ",abs_path($_)."\n";
+}
+

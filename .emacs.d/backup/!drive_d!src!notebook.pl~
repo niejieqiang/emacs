@@ -1,0 +1,411 @@
+#!/bin/env perl -w
+use strict;
+use warnings;
+use Gtk2;
+use Glib qw(TRUE FALSE);
+use encoding "gbk";
+use Encode;
+use Encode::CN;
+
+Gtk2->init();
+my $window = Gtk2::Window->new("toplevel");
+Gtk2::Rc->parse_string(
+qq(style "default-font"\n{\nfont_name = "simsun 9"\n}\nwidget_class "*" style "default-font"\ngtk-font-name = "simsun 9")
+);
+$window->set_size_request( 600, 400 );
+
+my $vbox = Gtk2::VBox->new( FALSE, 0 );
+
+my $menubar = Gtk2::MenuBar->new();
+my @menus   = (
+    [
+        "文件(_F)",
+        [ Gtk2::TearoffMenuItem->new() ],
+        [ Gtk2::ImageMenuItem->new_from_stock("gtk-new"), \&new_tab ],
+        [
+            Gtk2::ImageMenuItem->new_from_stock("gtk-close"),
+            [ "当前tab页", \&close_current_tab ],
+            [ "所有tab页", \&close_all_tabs ]
+        ],
+        [],
+        [
+            Gtk2::ImageMenuItem->new_from_stock("gtk-open"),
+            [ "当前tab页", \&open_file ],
+            [ "新tab页",   \&open_file_in_new_tab ]
+        ],
+        [ Gtk2::ImageMenuItem->new_from_stock("gtk-save"), \&save_file ],
+        [],
+        [ "退出", sub { &close_all_tabs(); Gtk2->main_quit(); } ]
+    ],
+    [ "编辑(_E)", [ Gtk2::TearoffMenuItem->new() ], ["复制"], ["粘贴"] ],
+    [
+        "查看(_V)",
+        [ Gtk2::TearoffMenuItem->new() ],
+        [ "前一页", \&view_prev_tab ],
+        [ "后一页", \&view_next_tab ]
+    ],
+    [ "帮助(_H)", [ Gtk2::TearoffMenuItem->new() ], [ "关于", \&show_about ] ]
+);
+
+&menu_init( $menubar, @menus );
+
+my $toolbar        = Gtk2::Toolbar->new();
+my $toolbutton_new = Gtk2::ToolButton->new_from_stock("gtk-new");
+$toolbutton_new->signal_connect( "clicked" => \&new_tab );
+$toolbar->insert( $toolbutton_new, -1 );
+my $toolbutton_close = Gtk2::ToolButton->new_from_stock("gtk-close");
+$toolbutton_close->signal_connect( "clicked" => \&close_current_tab );
+$toolbar->insert( $toolbutton_close, -1 );
+my $toolbutton_open = Gtk2::ToolButton->new_from_stock("gtk-open");
+$toolbutton_open->signal_connect( "clicked" => \&open_file );
+$toolbar->insert( $toolbutton_open, -1 );
+my $toolbutton_save = Gtk2::ToolButton->new_from_stock("gtk-save");
+$toolbar->insert( $toolbutton_save, -1 );
+$toolbutton_save->signal_connect( "clicked" => \&save_file );
+$toolbar->insert( Gtk2::SeparatorToolItem->new(), -1 );
+
+my $notebook = Gtk2::Notebook->new();
+$notebook->set_scrollable(TRUE);
+
+$vbox->pack_start( $menubar,  FALSE, FALSE, 0 );
+$vbox->pack_start( $toolbar,  FALSE, FALSE, 0 );
+$vbox->pack_start( $notebook, TRUE,  TRUE,  0 );
+$window->add($vbox);
+
+$window->signal_connect( "delete-event" => \&on_close );
+$window->signal_connect( destroy => sub { Gtk2->main_quit(); } );
+$window->signal_connect( "key-press-event", \&handle_hotkey );
+
+$window->show_all();
+
+&new_tab();
+
+Gtk2->main();
+
+#####################################################################################################
+
+sub handle_hotkey($$$) {
+    my ( $self, $event, $user_data ) = @_;
+    if ( $event->state() & "control-mask" ) {
+        my $keyval = $event->keyval();
+        if ( $keyval == 116 )    # T
+        {
+            &new_tab();
+        }
+        elsif ( $keyval == 119 )    # W
+        {
+            &close_current_tab();
+        }
+        elsif ( $keyval == 112 )    # P
+        {
+            &view_prev_tab();
+        }
+        elsif ( $keyval == 110 ) {
+            &view_next_tab();
+        }
+    }
+}
+
+sub show_about() {
+    my $about = Gtk2::AboutDialog->new();
+    $about->set_authors('appleii <newestbie@gmail.com>');
+    $about->set_artists('appleii <newestbie@gmail.com>');
+    $about->set_comments('My Perl/GTK demo project');
+
+    my $image = Gtk2::Image->new_from_stock( "gtk-about", "dialog" );
+    my ( $stock_id, $icon_size ) = $image->get_stock();
+    my $pixbuf = $image->render_icon( $stock_id, $icon_size );
+    $about->set_logo($pixbuf);
+
+    $about->run();
+    $about->destroy();
+}
+
+sub on_changed($$) {
+    my ( $textbuffer, $sw ) = @_;
+    if ( not defined $textbuffer->{flag} or $textbuffer->{flag} ne "modified" )
+    {
+        $textbuffer->{flag} = "modified";
+        my $label = $notebook->get_tab_label_text($sw);
+        $label .= " - 已修改";
+        $notebook->set_tab_label_text( $sw, $label );
+        $window->set_title($label);
+    }
+}
+
+sub on_close {
+    close_all_tabs();
+    return FALSE;
+}
+
+sub sw_to_textview($) {
+    return ( $_[0]->get_children() )[0];
+}
+
+sub view_next_tab() {
+    $notebook->next_page();
+}
+
+sub view_prev_tab() {
+    $notebook->prev_page();
+}
+
+sub get_basename($) {
+    if ( $_[0] =~ m{([^/\\]+)$} ) {
+        return $1;
+    }
+    else {
+        return undef;
+    }
+}
+
+sub get_current_textbuffer() {
+    my $textbuffer;
+
+    my $pagenum = $notebook->get_current_page();
+    if ( $pagenum == -1 ) {
+        return $textbuffer;
+    }
+
+    my $textview = &sw_to_textview( $notebook->get_nth_page($pagenum) );
+    $textbuffer = $textview->get_buffer();
+
+    return $textbuffer;
+}
+
+sub get_notebook_current_widget() {
+    my $pagenum = $notebook->get_current_page();
+    if ( $pagenum != -1 ) {
+        return $notebook->get_nth_page($pagenum);
+    }
+    else {
+        return undef;
+    }
+}
+
+sub new_tab() {
+    my $sw = Gtk2::ScrolledWindow->new();
+    $sw->set_policy( "automatic", "automatic" );
+    my $textview   = Gtk2::TextView->new();
+    my $textbuffer = Gtk2::TextBuffer->new();
+    $textview->set_buffer($textbuffer);
+    $textbuffer->signal_connect( changed => \&on_changed, $sw );
+
+    $sw->add($textview);
+    my $pagenum = $notebook->insert_page( $sw, undef, -1 );
+    my $label = "未命名" . ( $pagenum + 1 );
+    $notebook->set_tab_label_text( $sw, $label );
+    $window->set_title($label);
+
+    $textview->show();
+    $sw->show();
+    $notebook->set_current_page($pagenum);
+
+    return $pagenum;
+}
+
+sub close_current_tab() {
+    &confirm_save();
+    my $pagenum = $notebook->get_current_page();
+    if ( $pagenum != -1 ) {
+        $notebook->remove_page($pagenum);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+sub close_all_tabs() {
+    my $flag = FALSE;
+    while ( &close_current_tab() ) {
+        $flag = TRUE if ( $flag != TRUE );
+    }
+
+    return $flag;
+}
+
+sub menu_init(@) {
+    my ( $container, @menuitems ) = @_;
+
+    foreach my $menuitem (@menuitems) {
+        my ( $text, @arguments ) = @$menuitem;
+        my $menuitem;
+        if ( not defined $text ) {
+            $menuitem = Gtk2::MenuItem->new();
+            $container->append($menuitem);
+            $menuitem->show();
+            next;
+        }
+        elsif ( ref($text) ne "" ) {
+            $menuitem = $text;
+            $container->append($menuitem);
+            $menuitem->show();
+        }
+        else {
+            $menuitem = Gtk2::MenuItem->new($text);
+            $container->append($menuitem);
+            $menuitem->show();
+        }
+
+        if ( not defined $arguments[0] or ref( $arguments[0] ) eq "CODE" ) {
+            my ( $callback, $user_data ) = @arguments;
+            $menuitem->signal_connect( activate => $callback, $user_data )
+              if ( defined $callback );
+        }
+        elsif ( ref( $arguments[0] ) eq "ARRAY" ) {
+            my $sub_menu = Gtk2::Menu->new();
+            &menu_init( $sub_menu, @arguments );
+            $menuitem->set_submenu($sub_menu);
+            $menuitem->show();
+        }
+        else {
+            ;
+        }
+    }
+
+    return TRUE;
+}
+
+sub open_file() {
+    &confirm_save();
+    my $filename = &common_open_filename();
+    if ( defined $filename ) {
+        if ( open( my $fp, "<", $filename ) ) {
+            local $/;
+            my $content    = <$fp>;
+            my $textbuffer = &get_current_textbuffer();
+            if ( not defined $textbuffer ) {
+                return FALSE;
+            }
+
+            $textbuffer->set_text($content);
+            $textbuffer->{filename} = $filename;
+            $textbuffer->{flag}     = "opened";
+
+            my $basename = &get_basename($filename);
+            $window->set_title($basename);
+            $notebook->set_tab_label_text( get_notebook_current_widget(),
+                $basename );
+
+            return TRUE;
+        }
+        else {
+            warn "$filename: $^E";
+        }
+    }
+
+    return FALSE;
+}
+
+sub open_file_in_new_tab() {
+    &new_tab();
+    &open_file();
+}
+
+sub common_open_filename() {
+    my $filename;
+
+    my $dialog = Gtk2::FileChooserDialog->new(
+        "打开文件", undef, "open",
+        "gtk-open"   => "accept",
+        "gtk-cancel" => "cancel"
+    );
+    my $responese = $dialog->run();
+    if ( $responese eq "accept" ) {
+        $filename = encode( "gbk", $dialog->get_filename() );
+    }
+
+    $dialog->destroy();
+
+    return $filename;
+}
+
+sub save_file() {
+    my $textbuffer = &get_current_textbuffer();
+    my $filename   = $textbuffer->{filename};
+
+    if ( not defined $filename ) {
+        while (1) {
+            $filename = &common_save_filename();
+            if ( not defined $filename or not -e $filename ) {
+                last;
+            }
+
+            if ( &confirm("${filename}已存在，是否覆盖？") eq "yes" ) {
+                last;
+            }
+        }
+    }
+
+    if ( defined $filename ) {
+        if ( open( my $fp, ">", $filename ) ) {
+            my $content = $textbuffer->get_text( $textbuffer->get_start_iter(),
+                $textbuffer->get_end_iter(), TRUE );
+            print $fp encode( "gbk", $content );
+            close $fp;
+            $textbuffer->{filename} = $filename;
+            $textbuffer->{flag}     = "saved";
+
+            my $basename = &get_basename($filename);
+            $window->set_title($basename);
+            $notebook->set_tab_label_text( get_notebook_current_widget(),
+                $basename );
+
+            return TRUE;
+        }
+        else {
+            warn "$filename: $^E";
+        }
+    }
+
+    return FALSE;
+}
+
+sub common_save_filename() {
+    my $filename;
+
+    my $dialog = Gtk2::FileChooserDialog->new(
+        "保存文件", undef, "save",
+        "gtk-save"   => "accept",
+        "gtk-cancel" => "cancel"
+    );
+    my $responese = $dialog->run();
+    if ( $responese eq "accept" ) {
+        $filename = encode( "gbk", $dialog->get_filename() );
+    }
+
+    $dialog->destroy();
+
+    return $filename;
+}
+
+sub confirm($) {
+    my $dialog =
+      Gtk2::MessageDialog->new( $window, "modal", "question", "yes-no", "%s",
+        $_[0] );
+    my $response = $dialog->run();
+    $dialog->destroy();
+    $response = "no" if ( not defined $response );
+    return $response;
+}
+
+sub confirm_save() {
+    my $textbuffer = &get_current_textbuffer();
+    if ( defined $textbuffer->{flag} and $textbuffer->{flag} eq "modified" ) {
+        if (
+            defined $textbuffer->{filename}
+            or $textbuffer->get_text(
+                $textbuffer->get_start_iter(), $textbuffer->get_end_iter(),
+                TRUE
+            ) ne ""
+          )
+        {
+            if ( &confirm("文件已修改，是否保存") eq "yes" ) {
+                &save_file();
+                return TRUE;
+            }
+        }
+    }
+
+    return FALSE;
+}

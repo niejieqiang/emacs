@@ -1,0 +1,54 @@
+#!/usr/bin/perl -w
+#author:niejieqiang
+
+use strict;
+use feature('say');
+
+my @array;
+while (<DATA>) {
+    @array = split /\sk.*?(?<=\s)/, $_;
+
+    #  print map{"$_"}@array;
+
+#    @array = split /s/, $_;
+    foreach ( splice( @array, 1 ) ) {
+        print( join( " ", @array, $_ ));
+    }
+
+}
+
+__DATA__
+U+3400 kSemanticVariant U+4E18
+U+3405 kSemanticVariant U+4E94<kMatthews
+U+342B kSemanticVariant U+51F6
+U+342E kSemanticVariant U+8944
+U+342F kSemanticVariant U+5EB8
+U+3431 kSemanticVariant U+9B12<kMatthews
+U+3434 kSemanticVariant U+6500
+U+3441 kSemanticVariant U+20B74
+U+3444 kSemanticVariant U+4FAE<kMatthews
+U+344C kSemanticVariant U+5C29<kMatthews
+U+345D kSemanticVariant U+22671<kMeyerWempe
+U+3469 kTraditionalVariant U+5138
+U+346E kSimplifiedVariant U+2B748
+U+346F kSimplifiedVariant U+3454
+U+346F kTraditionalVariant U+3454
+U+3473 kSimplifiedVariant U+3447
+U+3473 kTraditionalVariant U+3447
+U+3487 kSemanticVariant U+511B<kMatthews
+U+348B kSemanticVariant U+5EDD<kMatthews U+53AE<kMatthews
+U+3493 kSimplifiedVariant U+20242
+U+3493 kTraditionalVariant U+20242
+U+349A kSemanticVariant U+7A69<kFenn,kMatthews
+U+349A kSpecializedSemanticVariant U+6587<kFenn
+U+349E kSemanticVariant U+5136<kMatthews
+U+34B0 kSemanticVariant U+5168<kMatthews
+U+34B2 kSemanticVariant U+8CA1<kMatthews
+U+34B7 kSemanticVariant U+8208<kLau,kMatthews
+U+34B7 kSpecializedSemanticVariant U+8208<kFenn
+U+34C1 kSemanticVariant U+7F51<kMatthews
+U+34DF kSpecializedSemanticVariant U+62AB<kMeyerWempe
+U+34E5 kTraditionalVariant U+528F
+U+34E8 kSimplifiedVariant U+523E
+U+34E8 kTraditionalVariant U+523E
+

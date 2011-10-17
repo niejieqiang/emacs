@@ -1,0 +1,127 @@
+﻿#!/usr/bin/yong-setup
+#Yong输入法配置文件
+
+[DESC]
+#配置文件版本
+version=2
+
+[IM]
+default=0
+0=zhengma
+1=baiducloud
+2=gbk
+3=pinyin
+
+#查询英文单词和生僻汉字
+dict_en=http://www.iciba.com/%s
+#候选字个数
+cand=4
+#自造词来源是鼠标选择(PRIMARY)，还是剪贴版(CLIPBOARD)
+select=PRIMARY
+#简繁转换
+s2t=0
+#简繁一对多转换
+s2t_m=0
+#汉字过滤 0:不过滤 1：常用汉字
+filter=0
+#默认启动
+enable=0
+#皮肤
+skin=skin/baidu 
+#回车键行为 clear:清编码 commit:上屏首选
+#enter=clear
+#数字键行为
+#num=push
+#半角出全角空格
+#space=full
+#预编辑模式 0:禁用 1:启用
+onspot=1
+#预编辑类型 0:候选 1:编码
+preedit=0
+#联想 0:禁用 1-:长度
+#legend=1
+#自动调频
+#auto_move=2
+#历史记录
+#history=history.txt
+#小键盘 0:默认 1:不作为编码键 2:出数字
+keypad=0
+enter=default
+space=default
+keyboard=0
+
+[main]
+#translate=translate.txt
+menu=menu.ini
+#用户的配置文件编辑器
+#edit=/usr/bin/gvim
+#显示托盘图标
+#不显示主窗口
+#状态栏半透明
+#主窗口位置 0:右下 1:顶部居中 2:左下
+pos=0
+
+[input]
+#编码提示
+hint=1
+#不使用光标跟随
+#不显示输入窗口
+noshow=0
+#候选显示长度
+strip=30
+font=Sun-ExtA 14
+
+[key]
+#打开输入法
+trigger=CTRL_ALT
+#二三重码选择
+select=RSHIFT
+#中英文切换
+CNen=LSHIFT
+#临时英语模式
+tEN=LCTRL
+#切换输入法
+switch=none
+#翻页
+page=- =
+#以词定字
+w2c=,.
+#汉字过滤
+filter=\\
+#调词频
+move=CTRL_UP CTRL_DOWN
+#显示输入条
+ishow=`
+#一键切换到输入法
+switch_default=CTRL_`
+switch_1=CTRL_1
+repeat=ALT_.
+
+[zhengma]
+name=郑码
+engine=libmb.so
+arg=mb/zhengma.txt
+overlay=mb/zhengma.ini
+#biaodian=en
+beep=none
+keymap=郑码字根图 zhengma.png 1 0
+help=小小输入法帮助 .yong\yong.chm
+#bing=1
+#bing_p=140 100
+
+
+[gbk]
+name=内码
+engine=libgbk.so
+
+[pinyin]
+name=拼音
+engine=libmb.so
+arg=mb/pinyin.txt
+overlay=mb/pinyin.ini
+
+[baiducloud]
+name=百度拼音输入法
+engine=libcloud.so
+arg=google
+user=

@@ -1,0 +1,8 @@
+#!/usr/bin/perl -w
+# test.pl --- 
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 14 Oct 2011
+# Version: 0.01
+
+use warnings;
+use strict;

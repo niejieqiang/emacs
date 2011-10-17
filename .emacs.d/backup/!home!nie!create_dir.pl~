@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+# create_dir.pl --- 
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 14 Oct 2011
+# Version: 0.01
+
+use warnings;
+use strict;
+
+mkdir("src");

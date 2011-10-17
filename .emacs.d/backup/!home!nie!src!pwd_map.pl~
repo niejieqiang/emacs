@@ -1,0 +1,29 @@
+#!/usr/bin/perl -w
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 15 Oct 2011
+# Version: 0.01
+
+use strict;
+use feature('say');
+
+
+__DATA__
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+mailnull:x:47:47::/var/spool/mqueue:/dev/null
+rpm:x:37:37::/var/lib/rpm:/bin/bash
+ident:x:98:98:pident user:/:/sbin/nologin
+pcap:x:77:77::/var/arpwatch:/sbin/nologin
+sshd:x:501:501::/dev/null:/dev/null
+mysql:x:100:101:MySQL server:/var/lib/mysql:/bin/bash
+cnhackTNT:x:0:0::/home/cnhackTNT:/bin/bash
+chutium:x:504:504:Seraph Chutium:/home/chutium/:/bin/bash
+
