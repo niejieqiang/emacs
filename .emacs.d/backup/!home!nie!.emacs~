@@ -1,0 +1,39 @@
+(load-file "~/emacs/.emacs")
+(put 'dired-find-alternate-file 'disabled nil)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(comint-highlight-prompt ((((min-colors 88) (background dark)) (:foreground "#5080a0"))))
+ '(cursor ((t (:inherit nil))))
+ '(custom-button-pressed-unraised ((default (:foreground "purple")) (((class color) (background dark)) (:inherit nil))))
+ '(custom-visibility ((t (:background "#6d8824" :foreground "white" :height 0.8))))
+ '(diredp-date-time ((((background dark)) (:foreground "#9090a0"))))
+ '(diredp-dir-heading ((((background dark)) (:background "#00003F3F3434" :foreground "#a4a338"))))
+ '(diredp-dir-priv ((((background dark)) (:background "#121212" :foreground "#5080a0"))))
+ '(diredp-display-msg ((((background dark)) (:foreground "#a4a338"))))
+ '(diredp-file-name ((((background dark)) (:foreground "#a4a338"))))
+ '(diredp-flag-mark ((((background dark)) (:background "#6d8824" :foreground "white"))))
+ '(diredp-flag-mark-line ((((background dark)) (:background "#6d8824" :foreground "white"))))
+ '(diredp-number ((((background dark)) (:foreground "#308040"))))
+ '(ido-subdir ((((min-colors 88) (class color)) (:foreground "#a54140"))))
+ '(isearch ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
+ '(isearch-fail ((((class color) (min-colors 88) (background dark)) (:background "red4" :foreground "white"))))
+ '(lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
+ '(link ((((class color) (min-colors 88) (background dark)) (:foreground "#5090a0" :underline t))))
+ '(match ((((class color) (min-colors 88) (background dark)) (:background "#5080a0" :foreground "white"))))
+ '(next-error ((t (:background "#a54140" :foreground "white"))))
+ '(org-todo ((t (:background "#121212" :foreground "#a4a338" :weight bold))))
+ '(secondary-selection ((((class color) (min-colors 88) (background dark)) (:background "SkyBlue4" :foreground "white"))))
+ '(show-paren-match ((t (:background "#b3b3df" :foreground "#003030" :weight bold))))
+ '(tempo-x-auto-face ((((background dark)) (:background "#003030" :foreground "white"))))
+ '(tempo-x-editable-face ((((background dark)) (:background "#5080a0" :foreground "white"))))
+ '(tempo-x-form-face ((((background dark)) (:background "#5080a0" :foreground "white"))))
+ '(trailing-whitespace ((((class color) (background dark)) (:background "#a54140" :foreground "white")))))

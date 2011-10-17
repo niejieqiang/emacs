@@ -1,0 +1,2 @@
+export PATH="$PATH:/opt/ActivePerl-5.14/site/bin:/opt/ActivePerl-5.14/bin"
+export MANPATH="$PATH:/opt/ActivePerl-5.14/site/man:/opt/ActivePerl-5.14/man"
