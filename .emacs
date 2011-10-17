@@ -1,6 +1,3 @@
-(require 'recentf);;get recent file-list;
-(recentf-mode 1)
-
 (add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|al\\)\\'" . cperl-mode))
     (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
     (add-to-list 'interpreter-mode-alist '("perl5" . cperl-mode))
@@ -153,6 +150,7 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 
 (global-set-key [f12] (quote shell));;press f12 enter to shell mode
+(define-key global-map "\C-h" 'backward-delete-char) ;;C-h to delete a char as backspace
 
 (setq kept-old-versions 2)
 ;;(setq version-control t);;
@@ -170,12 +168,9 @@
 (color-theme-wombat)
 
 (set-frame-font "Consolas-12");;
-;;(set-frame-font "DejaVu Sans Mono-12")
 (set-fontset-font "fontset-default" 'han '("Microsoft Yahei" . "unicode-bmp"))
-;;(set-frame-font "DejaVu Sans 10")
-;;(set-frame-font "Arial Unicode MS")
 
-(minibuffer-electric-default-mode 1);;minibuffer
+;;(minibuffer-electric-default-mode 1);;minibuffer
 
 (eval-after-load "dired-aux" ;;unzip 
    '(add-to-list 'dired-compress-file-suffixes 
@@ -200,7 +195,16 @@
 
 ;;(partial-completion-mode 1);;
 
+(setq browse-url-browser-function 'browse-url-generic ;;set conkeror as def browser of emacs
+browse-url-generic-program "/usr/bin/conkeror")
+
 (setq kill-ring-max 200);; make kill-ring bigger¡
+
+(setq confirm-nonexistent-file-or-buffer nil);;don't confirm when creat new file or buffer
+(setq confirm-kill-buffer nil)
+
+(require 'recentf);;get recent file-list;
+(recentf-mode 1)
 
 (setq x-select-enable-clipboard 1);;emacs paste to other external apps
 (setq inhibit-startup-message 1);;disable messages when startup emacs
@@ -224,7 +228,10 @@
 (setq resize-mini-windows nil);;Mini buffer won't resize automaticly
 
 (setq dired-recursive-copies 'always);;delete dir always recursive
-(setq dired-recursive-deletes 'always) 
+(setq dired-recursive-deletes 'always)
+(add-to-list 'load-path "~/emacs/.emacs.d")
+(require 'dired-view);;type the head of filename to index in dired;
+(add-hook 'dired-mode-hook 'dired-view-minor-mode-on)
 
 (show-paren-mode 1);;show paren for braces
 
@@ -234,8 +241,7 @@
 
 (require 'shell-completion);;autocomplete in shell mode
 
-;;最大化
-(defun my-maximized-horz ()
+(defun my-maximized-horz ();;maximized when emacs startup
 (interactive)
 (x-send-client-message
 nil 0 nil "_NET_WM_STATE" 32
@@ -258,8 +264,9 @@ nil 0 nil "_NET_WM_STATE" 32
 (custom-set-variables
   ;; If there is more than one, they won't work right.
  )
+
 (custom-set-faces
-  ;; If there is more than one, they won't work right.
+  ;; 
  '(comint-highlight-prompt ((((min-colors 88) (background dark)) (:foreground "#5080a0"))))
  '(cursor ((t (:background "#6d8824" :foreground "white"))))
  '(custom-visibility ((t (:background "#6d8824" :foreground "white" :height 0.8))))

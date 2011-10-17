@@ -1,0 +1,16 @@
+url_remoting_fn = load_url_in_new_buffer;
+
+define_webjump("b", "http://cn.bing.com/search?q=%s", $alternative = "http://www.bing.com/" $description="bing search engine");
+
+session_pref("xpinstall.whitelist.required", false);
+
+remove_hook("download_added_hook", open_download_buffer_automatically);
+
+define_webjump("bookmark",
+               function(term) {return term;},
+               $completer = history_completer($use_history = false,
+                                              $use_bookmarks = true,
+                                              $match_required = true),
+               $description = "visit conkeror bookmark");
+
+               
