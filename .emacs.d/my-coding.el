@@ -13,12 +13,12 @@
 (define-key ac-menu-map "\C-p" 'ac-previous)
 (setq-default ac-sources '(ac-source-words-in-all-buffer)) ;;set ac-source default
 
-;; (add-to-list 'load-path
-;;                   "~/emacs/.emacs.d/yasnippet")
-;;     (require 'yasnippet) ;; not yasnippet-bundle
-;;     (yas/initialize)
-;;     (yas/load-directory "~/emacs/.emacs.d/yasnippet/snippets")
-;; ;(require 'auto-complete-yasnippet)
+(add-to-list 'load-path
+                  "~/emacs/.emacs.d/yasnippet")
+    (require 'yasnippet) ;; not yasnippet-bundle
+    (yas/initialize)
+    (yas/load-directory "~/emacs/.emacs.d/yasnippet/snippets")
+;(require 'auto-complete-yasnippet)
 
 
 (add-to-list 'load-path "~/emacs/.emacs.d/pde/lisp")
