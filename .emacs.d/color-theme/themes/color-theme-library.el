@@ -38,7 +38,7 @@
      ((background-color . "#121212")
       (background-mode . dark)
       (border-color . "black")
-      (cursor-color . "#508")
+      (cursor-color . "#6d8824")
       (foreground-color . "#9090a0"))
      (default ((t (:background "#121212" :foreground "#9090a0"))))
      (border-glyph ((t (nil))))
@@ -81,8 +81,35 @@
      (cperl-highlight-charclass ((t (:foreground "#308040"))))
      (cperl-forward-group-in-re ((t (:foreground "#003030" :background "#121212"))))
      (cperl-backward-to-start-of-continued-exp ((t (:background "#121212" :foreground "#003030"))))
-     (cperl-highlight-variables-indiscriminately ((t (nil))))
+     (cperl-highlight-variables-indiscriminately ((t (:background "#121212" :foreground "#308040"))))
      (cperl-array-face ((t (:foreground "#308040"))))
      (cperl-val ((t (:foreground "#308040"))))
-     (cperl-beautify-regexp-piece ((t (:background "#121212" :foreground "white"))))
+     (cperl-beautify-regexp-piece ((t (:background "#121212" :foreground "#003030"))))
+     (cperl-forward-group-in-re ((t (:background "#121212" :foreground "#003030"))))
+     (anything-visible-mark ((t (:background "#308040" :foreground "white"))))
+     (anything-visible-mark-face ((t (:background "#308040" :foreground "white"))))
+     (anything-isearch-match-face ((t (:background "#6d8824" :foreground "white"))))
+     (anything-isearch-match ((t (:background "#6d8824" :foreground "white"))))
+     (anything-header-face ((t (:background "#308040" :foreground "white"))))
+
+     (comint-highlight-prompt ((t (:foreground "##BFAC35"))))
+     (custom-comment-face ((t (:background "#6d8824" :foreground "white"))))
+
+     (diredp-flag-mark ((t (:foreground "#308040"))))
+    (dired-symlink-face ((t (:foreground "#003030"))))
+    (diredp-other-priv ((t (:foreground "#9090a0"))))
+     (dired-mark-face ((t (:background "#6d8824" :foreground "white"))))
+     (diredp-dir-priv ((t (:foreground "#a4a338"))))
+     (diredp-display-msg ((t (:foreground "#a4a338"))))
+     (diredp-exec-priv ((t (:foreground "#4F4F3B3B2121"))))
+     (diredp-flag-mark-line ((t (:background "#6d8824" :foreground "white"))))
+     (diredp-number ((t (:foreground "#308040"))))
+     (diredp-file-name ((t (:foreground "#5080a0"))))
+     (diredp-file-suffix ((t (:foreground "#5080a0"))))
+     (diredp-date-time ((t (:foreground "#9090a0"))))
 )))
+
+
+
+
+

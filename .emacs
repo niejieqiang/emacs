@@ -62,10 +62,8 @@
 (require 'dired-isearch)
 (setq dired-recursive-copies 'always);;delete dir always recursive
 (setq dired-recursive-deletes 'always)
-(setq dired-dwim-target t)
 (setq confirm-nonexistent-file-or-buffer nil);;don't confirm when creat new file or buffer
 (setq confirm-kill-buffer nil)
-
 
 (require 'ibus);; Turn on ibus-mode automatically after loading .emacs
 (add-hook 'after-init-hook 'ibus-mode-on)
@@ -76,18 +74,6 @@
 (require 'color-theme);;use my favourite theme
 (color-theme-initialize)
 (color-theme-wombat)
-;;custom colors
-(custom-set-variables
- )
-(custom-set-faces
- '(comint-highlight-prompt ((((min-colors 88) (background dark)) (:foreground "#5080a0"))))
- '(cursor ((t (:background "black" :foreground "#909090"))))
- '(custom-visibility ((t (:background "#6d8824" :foreground "white" :height 0.8))))
- '(ido-subdir ((((min-colors 88) (class color)) (:foreground "#a54140"))))
- '(isearch ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
- '(lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
- '(link ((((class color) (min-colors 88) (background dark)) (:foreground "#5090a0" :underline t))))
- '(secondary-selection ((((class color) (min-colors 88) (background dark)) (:background "SkyBlue4" :foreground "white")))))
 
 (defun my-maximized-horz ();;maximized when emacs startup
 (interactive)
