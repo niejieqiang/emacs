@@ -95,6 +95,8 @@
      (comint-highlight-prompt ((t (:foreground "##BFAC35"))))
      (custom-comment-face ((t (:background "#6d8824" :foreground "white"))))
 
+     (yas/field-highlight-face ((t (:background "#6d8824" :foreground "white"))))
+     
      (diredp-flag-mark ((t (:foreground "#308040"))))
     (dired-symlink-face ((t (:foreground "#003030"))))
     (diredp-other-priv ((t (:foreground "#9090a0"))))
