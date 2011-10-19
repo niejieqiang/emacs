@@ -92,7 +92,15 @@
      (anything-isearch-match ((t (:background "#6d8824" :foreground "white"))))
      (anything-header-face ((t (:background "#308040" :foreground "white"))))
 
-     (comint-highlight-prompt ((t (:foreground "##BFAC35"))))
+     (isearch-search ((t (:background "#b03030" :foreground "white"))))
+     (isearch-fail ((t (:background "#b03030" :foreground "white"))))
+     (isearch-forward ((t (:background "#6d8824" :foreground "white"))))
+     (isearch-backward ((t (:background "#6d8824" :foreground "white"))))
+     (isearch-face ((t (:background "#6d8824" :foreground "white"))))
+     (isearch ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
+     (lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background "#222222" :foreground "#9090a0"))))
+     
+     (comint-highlight-prompt ((t (:foreground "#BFAC35"))))
      (custom-comment-face ((t (:background "#6d8824" :foreground "white"))))
 
      (yas/field-highlight-face ((t (:background "#6d8824" :foreground "white"))))
