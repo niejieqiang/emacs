@@ -1,5 +1,4 @@
-#name : if (...) { ... }
+#name : grep { ... }
 # --
-if ( ${1:expression} ) {
-    $0
-}
+$0grep{ ${1:expression} }
+  

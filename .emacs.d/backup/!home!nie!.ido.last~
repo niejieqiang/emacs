@@ -7,7 +7,7 @@
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/" . "text-mode/")
  ("/home/nie/emacs/" . ".emacs.d/")
  ("/home/nie/emacs/.emacs.d/color-theme/" . "themes/")
- ("/home/nie/emacs/.emacs.d/" . "yasnippet/")
+ ("/home/nie/emacs/.emacs.d/" . "auto-complete/")
  ("/home/nie/.emacs.d/color-theme/" . "themes/")
  ("/home/nie/" . "src/")
  ("/home/" . "nie/")
@@ -22,14 +22,15 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/"
- "/home/nie/src/"
- "/home/nie/emacs/.emacs.d/color-theme/themes/"
  "/home/nie/emacs/"
+ "/home/nie/emacs/.emacs.d/auto-complete/"
+ "/home/nie/src/"
+ "/home/nie/"
+ "/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/"
  "/home/nie/emacs/.emacs.d/"
+ "/home/nie/emacs/.emacs.d/color-theme/themes/"
  "/home/nie/.yong/mb/"
  "/home/nie/emacs/.emacs.d/color-theme/"
- "/home/nie/"
  "/home/nie/.yong/"
  "/home/nie/Documents/"
  "/opt/yong/"
@@ -47,39 +48,43 @@
 
 ;; ----- ido-work-file-list -----
 (
- "grep"
- "map"
- "map.pl"
- "binperl"
- "test.pl"
- "color-theme-library.el"
  ".emacs"
- "my-coding.el"
- "1.pl"
- "count_perl_lwp.pl"
+ "auto-complete+.el"
+ "ini-auto-complete.el"
+ "auto-complete-extension.el"
+ "1.txt"
+ "test.pl"
+ "init-auto-complete.el"
+ "auto-complete-config.el"
+ "sort"
+ "grep"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/" (20125 1185) "while" "sub" "./" "else" "cperl-mode/" "if" "find" "map" "eval" "unless" "fore" "binperl" "elsif" "grep" "../")
+ ("/home/nie/" (20126 18250) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" "perl-yas.7z" "babiloo.log" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" "Firefox_wallpaper.png" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".eshell/" ".pentadactylrc" ".goldendict/" ".pulse/" "#babiloo.log#" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" "create_dir.pl" ".conkeror.mozdev.org/" "out.ogv" "Music/" ".emacs.d (2)/" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" "count_perl_lwp.pl" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".pentadactyl/" ".yong/" ".ido.last")
 
- ("/home/nie/" (20125 870) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" "perl-yas.7z" "babiloo.log" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" "Firefox_wallpaper.png" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".pentadactylrc" ".goldendict/" ".pulse/" "#babiloo.log#" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" "create_dir.pl" ".conkeror.mozdev.org/" "out.ogv" "Music/" ".emacs.d (2)/" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" "count_perl_lwp.pl" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".pentadactyl/" ".yong/" ".ido.last")
+ ("/home/nie/emacs/" (20126 18655) "./" ".emacs" "README" ".git/" ".emacs.d/" "1.txt" "../")
 
- ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/" (20124 64822) "css-mode/" "markdown-mode/" "./" "sql-mode/" "scala-mode/" "snippet-mode/" "time" "ruby-mode/" "email" "erlang-mode/" "cc-mode/" "latex-mode/" "html-mode/" "nxml-mode/" "python-mode/" "emacs-lisp-mode/" "f90-mode/" "perl-mode/" "../" "rst-mode/")
+ ("/home/nie/emacs/.emacs.d/auto-complete/" (20126 17623) "auto-complete-extension.el" "./" "auto-complete-config.elc" "fuzzy.elc" "auto-complete.el" "auto-complete-config.el" "auto-complete.elc" "popup.elc" "popup.el" "fuzzy.el" "auto-complete+.el" "../")
+
+ ("/home/nie/src/" (20126 16620) "split_map.pl" "test.txt" "square_map.pl" "map.pl" "./" "test.pl" "shell_exercise.pl" "pwd_map.pl" "html_get_pre.pl" "map_increase100.pl" "#count_perl_lwp.pl#" "count_perl_lwp.pl" "../")
+
+ ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/" (20125 53804) "markdown-mode/" "./" "sql-mode/" "scala-mode/" "snippet-mode/" "ruby-mode/" "erlang-mode/" "latex-mode/" "html-mode/" "nxml-mode/" "python-mode/" "emacs-lisp-mode/" "f90-mode/" "perl-mode/" "../" "rst-mode/")
+
+ ("/home/nie/emacs/.emacs.d/perl-complete/" (20124 58114) "./" "anything.el" "anything.elc" "anything-match-plugin.el" "perl-completion.el" "../")
+
+ ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20125 9867) "./" "color-theme-library.el" "../")
+
+ ("/home/nie/emacs/.emacs.d/" (20125 5070) "dired-isearch.el" "backup/" "ac-comphist.dat" "shell-completion.elc" "line-num.el" "./" "auto-complete/" "dired-isearch.elc" "mon-css-color.el" "abbrev_defs" "perl-complete/" "line-num.elc" "color-theme/" "#my-coding.el#" "mon-css-color.elc" "auto-save-list/" "#ac-comphist.dat#" "pde/" "shell-completion.el" "../" "yasnippet/" "dired+.el")
+
+ ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/" (20125 1604) "while" "sub" "sort" "./" "else" "cperl-mode/" "if" "find" "map" "eval" "unless" "fore" "binperl" "elsif" "grep" "../")
 
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/" (20124 64822) "./" "text-mode/" "../")
 
  ("/home/nie/emacs/.emacs.d/yasnippet/" (20125 577) "yasnippet.el" "./" "dropdown-list.el" "snippets/" "../" "dropdown-list.elc" "yasnippet.elc")
 
  ("/media/softpdia/src/" (20119 64533) "test.pl" "reminder.txt" "notebook.pl" "get_fullpath.pl" "#notebook.pl#" "../" "./")
-
- ("/home/nie/src/" (20125 1036) "split_map.pl" "#test.pl#" "test.txt" "square_map.pl" "map.pl" "./" "test.pl" "shell_exercise.pl" "pwd_map.pl" "html_get_pre.pl" "map_increase100.pl" "#count_perl_lwp.pl#" "count_perl_lwp.pl" "../")
-
- ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20125 864) "./" "color-theme-library.el" "../")
-
- ("/home/nie/emacs/.emacs.d/" (20124 64669) "dired-isearch.el" "backup/" "ac-comphist.dat" "shell-completion.elc" "line-num.el" "./" "auto-complete/" "dired-isearch.elc" "mon-css-color.el" "abbrev_defs" "perl-complete/" "line-num.elc" "color-theme/" "mon-css-color.elc" "auto-save-list/" "#ac-comphist.dat#" "pde/" "shell-completion.el" "../" "yasnippet/" "dired+.el" "my-coding.el")
-
- ("/home/nie/emacs/" (20125 619) "./" ".emacs" "README" ".git/" ".emacs.d/" "../")
 
  ("/home/nie/Downloads/" (20124 63696) "map.txt" "install_flash_player_11_linux.i386/" "小小皮肤(从搜狗移植的)/" "./" "auto-complete/" "小小皮肤(从搜狗移植的).7z" "emacs-w3m-1.4.4/" "upload.zip" "install_flash_player_11_linux.i386.tar.gz" "niejieqiang-emacs-557b864.zip" "fonts/" "conkeror_1.0~~pre+git1110162207-~nightly1_all.deb" "fonts.7z" "luolE-leMacs-d465a2f.zip" "luolE-leMacs-d465a2f/" "recentf-1.23.zip" "map.zip" "gbpad/" "bliss_600dpi.zip" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342.tar.gz" "yong-lin-20111012.7z" "emacs-w3m-1.4.4.tar.gz" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342/" "upload.txt" "yasnippet-0.6.1c.tar.bz2" "recentf-1.23/" "conkeror_1.0~~pre+git1110132207-~nightly1_all.deb" "blastura-dot-emacs-37550c5.zip" "auto-complete-1.3.1.zip" "emacs" "yasnippet-0.6.1c/" "../" "02Bliss.zip" "02Bliss/")
 

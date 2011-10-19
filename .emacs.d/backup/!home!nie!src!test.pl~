@@ -1,13 +1,19 @@
 #!/usr/bin/perl -w
-# test.pl --- 
+# test.pl ---
 # Author: niejieqiang <niejieqiang@qq.com>
 # Created: 14 Oct 2011
 # Version: 0.01
 
 use warnings;
 use strict;
-use ExtUtils::Installed;
 
-my $inst=ExtUtils::Installed->new;
-print join "\n",$inst->modules;
-undef $inst;
+use File::Find;
+while (<DATA>) {
+    menu="false";
+    
+}
+
+__DATA__
+1232<embed type="application/x-shockwave-flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-4445535400000" src="Uploads/cf/201107/18/1536407566.swf" wmode="opaque" quality="high" menu="false" play="true" loop="true" allowfullscreen="true" height="400" width="480"><br />
+</embed>123213<embed type="application/x-shockwave-flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-4445535400000" src="Uploads/cf/201107/18/1536407566.swf" wmode="opaque" quality="high" menu="false" play="true" loop="true" allowfullscreen="true" height="400" width="480"><br />
+</embed>

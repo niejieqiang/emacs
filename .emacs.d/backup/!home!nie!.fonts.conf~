@@ -1,0 +1,64 @@
+
+<fontconfig>
+<!-- Add by niejieqiang-->
+   <alias>
+                <family>dejavu sans mono</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+   <alias>
+                <family>Consolas</family>
+                <prefer>
+                        <family>Simsun-18030</family>
+                </prefer>
+   </alias>
+
+   
+   <alias>
+                <family>ProggyCleanTT</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+   
+   <alias>
+                <family>Ubuntu</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+    
+   <alias>
+                <family>URW Gothic L</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+  <alias>
+                <family>Lucida Sans Typewriter</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+     <alias>
+                <family>Monospace</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+        <alias>
+                <family>Monaco</family>
+                <prefer>
+                        <family>Microsoft Yahei</family>
+                </prefer>
+   </alias>
+
+
+   </fontconfig>
+
