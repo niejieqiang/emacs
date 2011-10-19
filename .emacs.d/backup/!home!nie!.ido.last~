@@ -7,9 +7,9 @@
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/" . "text-mode/")
  ("/home/nie/emacs/" . ".emacs.d/")
  ("/home/nie/emacs/.emacs.d/color-theme/" . "themes/")
- ("/home/nie/emacs/.emacs.d/" . "auto-complete/")
+ ("/home/nie/emacs/.emacs.d/" . "color-theme/")
  ("/home/nie/.emacs.d/color-theme/" . "themes/")
- ("/home/nie/" . "src/")
+ ("/home/nie/" . "emacs/")
  ("/home/" . "nie/")
  ("/home/nie/.yong/skin/" . "baidu/")
  ("/home/nie/.yong/" . "mb/")
@@ -22,15 +22,15 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/nie/emacs/.emacs.d/color-theme/themes/"
+ "/home/nie/emacs/.emacs.d/color-theme/"
  "/home/nie/emacs/"
+ "/home/nie/emacs/.emacs.d/color-theme/themes/"
  "/home/nie/"
  "/home/nie/src/"
  "/home/nie/emacs/.emacs.d/auto-complete/"
  "/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/"
  "/home/nie/emacs/.emacs.d/"
  "/home/nie/.yong/mb/"
- "/home/nie/emacs/.emacs.d/color-theme/"
  "/home/nie/.yong/"
  "/home/nie/Documents/"
  "/opt/yong/"
@@ -48,6 +48,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "color-theme.el"
  "color-theme-library.el"
  ".emacs"
  "test.pl"
@@ -57,20 +58,19 @@
  "auto-complete-extension.el"
  "1.txt"
  "init-auto-complete.el"
- "auto-complete-config.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20126 47560) "./" "color-theme-library.el" "../")
+ ("/home/nie/emacs/" (20126 49950) "./" "git.pl" ".emacs" "README" ".git/" ".emacs.d/" "../")
 
- ("/home/nie/" (20126 47438) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" "perl-yas.7z" ".#.emacs" "babiloo.log" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" "Firefox_wallpaper.png" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".eshell/" ".pentadactylrc" ".goldendict/" ".pulse/" "#babiloo.log#" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" "create_dir.pl" ".conkeror.mozdev.org/" "out.ogv" "Music/" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" "count_perl_lwp.pl" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".pentadactyl/" ".yong/" ".ido.last")
+ ("/home/nie/" (20126 48858) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" "perl-yas.7z" "babiloo.log" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" "Firefox_wallpaper.png" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".eshell/" ".pentadactylrc" ".goldendict/" ".pulse/" "#babiloo.log#" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" "create_dir.pl" ".conkeror.mozdev.org/" "out.ogv" "Music/" "#.emacs#" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" "count_perl_lwp.pl" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".pentadactyl/" ".yong/" ".ido.last")
+
+ ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20126 47637) "./" "color-theme-library.el" "../")
 
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/" (20126 21024) "./" "perl-mode/" "../")
 
  ("/home/nie/emacs/.emacs.d/" (20126 20836) "dired-isearch.el" "backup/" "ac-comphist.dat" "shell-completion.elc" "line-num.el" "./" "auto-complete/" "dired-isearch.elc" "mon-css-color.el" "abbrev_defs" "perl-complete/" "line-num.elc" "color-theme/" "mon-css-color.elc" "auto-save-list/" "#ac-comphist.dat#" "pde/" "shell-completion.el" "../" "yasnippet/" "dired+.el")
-
- ("/home/nie/emacs/" (20126 44685) "./" ".emacs" "README" ".git/" ".emacs.d/" "../")
 
  ("/home/nie/src/" (20126 22082) "split_map.pl" "test.txt" "square_map.pl" "map.pl" "./" "test.pl" "shell_exercise.pl" "pwd_map.pl" "html_get_pre.pl" "map_increase100.pl" "#count_perl_lwp.pl#" "count_perl_lwp.pl" "../")
 
