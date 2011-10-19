@@ -1,4 +1,5 @@
 (load-file "~/emacs/.emacs")
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -10,14 +11,4 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(anything-isearch-match ((t (:background "#6d8824" :foreground "white"))))
- '(anything-visible-mark ((((min-colors 88) (background dark)) (:background "#308040" :foreground "white"))))
- '(comint-highlight-prompt ((((min-colors 88) (background dark)) (:foreground "#5080a0"))))
- '(cperl-forward-group-in-re ((t (:background "#121212" :foreground "#a54140"))))
- '(cursor ((t (:background "black" :foreground "#909090"))))
- '(custom-visibility ((t (:background "#6d8824" :foreground "white" :height 0.8))))
- '(ido-subdir ((((min-colors 88) (class color)) (:foreground "#a54140"))))
- '(isearch ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
- '(lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
- '(link ((((class color) (min-colors 88) (background dark)) (:foreground "#5090a0" :underline t))))
- '(secondary-selection ((((class color) (min-colors 88) (background dark)) (:background "SkyBlue4" :foreground "white")))))
+ '(lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background "#222222" :foreground "#9090a0")))))
