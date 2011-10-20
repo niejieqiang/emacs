@@ -104,6 +104,7 @@
      (custom-comment-face ((t (:background "#6d8824" :foreground "white"))))
 
      (yas/field-highlight-face ((t (:background "#6d8824" :foreground "white"))))
+     (ac-yasnippet-selection-face ((t (:background "steelblue" :foreground "white"))))
      
      (diredp-flag-mark ((t (:foreground "#308040"))))
     (dired-symlink-face ((t (:foreground "#003030"))))

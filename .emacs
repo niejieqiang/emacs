@@ -1,8 +1,3 @@
-(add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|al\\)\\'" . cperl-mode))
-    (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
-    (add-to-list 'interpreter-mode-alist '("perl5" . cperl-mode))
-    (add-to-list 'interpreter-mode-alist '("miniperl" . cperl-mode))
-
 (add-to-list 'load-path "~/emacs/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/emacs/.emacs.d/auto-complete//ac-dict")
@@ -27,45 +22,28 @@
     (yas/load-directory "~/emacs/.emacs.d/yasnippet/snippets")
 
 
+
 (add-to-list 'load-path "~/emacs/.emacs.d/pde/lisp")
 (load "pde-load")
 (ido-mode 1)
-;;(setq ido-enable-tramp-completion t);;ido setting tramp to find file
+(setq ido-enable-tramp-completion t);;ido setting tramp to find file
+
 ;;(setq ido-save-directory-list-file nil);;
 (require 'template-simple)
-;; ;; M-SPC not available, window manager take it away
-(global-set-key (kbd "M-'") 'just-one-space)
-(global-set-key (kbd "C-M-=") 'pde-indent-dwim)
-;; nearest key to dabbrev-expand
-(global-set-key (kbd "M-;") 'hippie-expand)
-(global-set-key (kbd "C-;") 'comment-dwim)
-(global-set-key (kbd "C-c f") 'comint-dynamic-complete)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq hippie-expand-try-functions-list
-          '(try-expand-line
-            try-expand-dabbrev
-            try-expand-line-all-buffers
-            try-expand-list
-            try-expand-list-all-buffers
-            try-expand-dabbrev-visible
-            try-expand-dabbrev-all-buffers
-            try-expand-dabbrev-from-kill
-            try-complete-file-name
-            try-complete-file-name-partially
-            try-complete-lisp-symbol
-            try-complete-lisp-symbol-partially
-            try-expand-whole-kill))
-(autoload 'comint-dynamic-complete "comint" "Complete for file name" t)
-(setq comint-completion-addsuffix '("/" . ""))
+
+;; pde code style
+;; pde code style
+;; pde code style
+(global-set-key (kbd "M-;") 'comment-or-uncomment-region)
 (setq-default indent-tabs-mode nil)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defalias 'perl-mode 'cperl-mode)
 (defun pde-perl-mode-hook ()
   (abbrev-mode t)
   (add-to-list 'cperl-style-alist
                '("PDE"
                  (cperl-auto-newline                         . t)
-                 (cperl-brace-offset                         . 1)
+                 (cperl-brace-offset                         . 0)
                  (cperl-close-paren-offset                   . -4)
                  (cperl-continued-brace-offset               . 0)
                  (cperl-continued-statement-offset           . 4)
@@ -77,17 +55,44 @@
                  (cperl-merge-trailing-else                  . t)
                  (cperl-tab-always-indent                    . t)))
   (cperl-set-style "PDE"))
-;;compile and run perl file
+
+;;pde compile and run perl file
+;;pde compile and run perl file
+;;pde compile and run perl file
 (global-set-key (kbd "C-c s") 'compile-dwim-compile)
+(global-set-key (kbd "C-c r") 'compile-dwim-run)
+(setq compilation-buffer-name-function 'pde-compilation-buffer-name)
+(autoload 'compile-dwim-run "compile-dwim" "Build and run" t)
+(autoload 'compile-dwim-compile "compile-dwim" "Compile or check syntax" t)
+(autoload 'executable-chmod "executable"
+          "Make sure the file is executable.")
+(defun pde-perl-mode-hook ()
+   ;; chmod when saving
+  (when (and buffer-file-name
+        (not (string-match "\\.\\(pm\\|pod\\)$" (buffer-file-name))))
+      (add-hook 'after-save-hook 'executable-chmod nil t))
+  (set (make-local-variable 'compile-dwim-check-tools) nil))
+
+;;pde code browser
+;;pde code browser
+;;pde code browser
+;;(require 'ffap)
+(global-set-key (kbd "C-c i") 'imenu)
+(global-set-key (kbd "C-c v") 'imenu-tree)
+(setq tags-table-list '("./TAGS" "../TAGS" "../../TAGS"))
+(autoload 'imenu-tree "imenu-tree" "Show imenu tree" t)
+(setq imenu-tree-auto-update t)
+(eval-after-load "imenu"
+ '(defalias 'imenu--completion-buffer 'pde-ido-imenu-completion))
+(autoload 'tags-tree "tags-tree" "Show TAGS tree" t)
+
 
 (add-to-list 'load-path "~/emacs/.emacs.d/perl-complete/")
-;;(require 'anything)
-;;(require 'anything-match-plugin)        
 (add-hook 'cperl-mode-hook ;;perl-complete
           (lambda()
             (require 'perl-completion)
             (perl-completion-mode t)))
-(add-hook  'cperl-mode-hook
+(add-hook 'cperl-mode-hook
            (lambda ()
              (when (require 'auto-complete nil t) ; no error whatever auto-complete.el is not installed.
                (auto-complete-mode t)
@@ -98,6 +103,10 @@
                        ac-source-words-in-all-buffer
                        ac-source-files-in-current-dir
                        ac-source-filename) ))))
+(add-hook 'cperl-mode-hook 'outline-minor-mode)
+(define-key global-map "\M-'" 'show-all) ;;M-' to show all fold
+(define-key global-map "\M-[" 'hide-subtree) ;;hide sub
+(define-key global-map "\M-]" 'show-subtree) ;;show sub
 
 (setq cperl-highlight-variables-indiscriminately t)
 
@@ -154,10 +163,9 @@
 (setq frame-title-format "editing­---%b");;modify title 
 
 (display-time-mode 1);;display time
-
 (setq display-time-24hr-format 1);;use 24 hour format
 (setq display-time-day-and-date t);;display date
-;;(setq display-time-use-mail-icon t);;
+(setq display-time-use-mail-icon t);;
 (setq display-time-interval 10);;
 (setq display-time-format "公元%Y年%m月%d日,%A,%H:%M");;
 

@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 14 Oct 2011
+# Version: 0.01
+
+use strict;
+use feature('say');
+
+my @input_nums=(2,6,11,8,32,61);
+my @result =map{ $_+100 }@input_nums;
+print map{"$_\n"}@result;
