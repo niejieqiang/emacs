@@ -2,11 +2,13 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/nie/res/" . "perl/")
+ ("/home/nie/Mail/" . "drafts/")
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/" . "cperl-mode/")
  ("/home/nie/emacs/.emacs.d/yasnippet/" . "snippets/")
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/" . "perl-mode/")
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/" . "text-mode/")
- ("/home/nie/emacs/" . ".emacs.d/")
+ ("/home/nie/emacs/" . "keysnail-plugin/")
  ("/home/nie/emacs/.emacs.d/color-theme/" . "themes/")
  ("/home/nie/emacs/.emacs.d/" . "vim-mode/")
  ("/home/nie/.emacs.d/color-theme/" . "themes/")
@@ -23,18 +25,23 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/nie/emacs/"
- "/home/nie/emacs/.emacs.d/"
- "/home/nie/emacs/.emacs.d/vim-mode/"
  "/home/nie/src/"
- "/media/softpdia/src/"
+ "/home/nie/emacs/"
+ "/home/nie/emacs/server/"
+ "/home/nie/emacs/keysnail-plugin/"
+ "/home/nie/emacs/.emacs.d/"
  "/home/nie/"
+ "/home/nie/.yong/"
+ "/home/nie/res/perl/"
  "/home/nie/emacs/.emacs.d/color-theme/themes/"
+ "/home/nie/res/perl/splice.pl/"
+ "/home/nie/Mail/drafts/"
+ "/home/nie/emacs/.emacs.d/vim-mode/"
+ "/media/softpdia/src/"
  "/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/"
  "/home/nie/emacs/.emacs.d/color-theme/"
  "/home/nie/emacs/.emacs.d/auto-complete/"
  "/home/nie/.yong/mb/"
- "/home/nie/.yong/"
  "/home/nie/Documents/"
  "/opt/yong/"
  "/home/nie/emacs/.emacs.d/yasnippet/"
@@ -50,45 +57,67 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "unihan_handle.pl"
  ".emacs"
- "vim.el"
- "map_increase100.pl"
- "vim-commands.el"
- "notebook.pl"
- "count_perl_lwp.pl"
- "fold-dwim.el"
- "shell_exercise.pl"
+ "server"
+ "1"
+ ".keysnail.js"
  "test.pl"
- ".pentadactylrc"
+ "util.el"
+ "yong.ini"
+ "sort_hash_by_value.wiki"
+ "splice.pl"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/nie/emacs/.emacs.d/" (20127 61305) "fold-dwim.el" "dired-isearch.el" "backup/" "ac-comphist.dat" "shell-completion.elc" "line-num.el" "./" "auto-complete/" "dired-isearch.elc" "fold-dwim.elc" "mon-css-color.el" "abbrev_defs" "perl-complete/" "vim-mode/" "line-num.elc" "color-theme/" "mon-css-color.elc" "auto-save-list/" "pde/" "shell-completion.el" "../" "yasnippet/" "dired+.el")
+ ("/home/nie/src/" (20130 27652) "split_map.pl" "roam_interface_map14.pl" "test.txt" "square_map.pl" "map.pl" "./" "test.pl" "spreadsheet_write_excel.pl" "shell_exercise.pl" "list_between_twodates.pl" "search_ADD.pl/" "pyramid.pl" "convert_1tomore.pl" "#map_increase100.pl#" "pwd_map.pl" "unihan_handle.pl" "html_get_pre.pl" "map_increase100.pl" "conv_more2one_flymake.pl" "#count_perl_lwp.pl#" "zhengma2baidu.pl" "count_perl_lwp.pl" "conv_more2one.pl" "../" "simp_to_trad.pl")
 
- ("/home/nie/emacs/" (20127 61716) "./" ".emacs" "README" ".git/" ".emacs.d/" "../")
+ ("/home/nie/" (20130 41900) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" ".banter.log" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".eshell/" ".pentadactylrc" ".goldendict/" ".vimperator/" ".pulse/" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" ".conkeror.mozdev.org/" "Music/" ".mplayer/" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".thunderbird/" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".w3m/" ".pentadactyl/" ".yong/" ".ido.last")
+
+ ("/home/nie/emacs/" (20130 29246) "server/" "./" ".emacs" "firefox/" "README" ".git/" ".emacs.d/" "../")
+
+ ("/home/nie/emacs/server/" (20130 17611) "server" "./" "../")
+
+ ("/home/nie/.emacs.d/" (20130 17680) "ac-comphist.dat" "./" "abbrev_defs" "session.103ace9f3e9c56d46131912309930837000000015090046" "auto-save-list/" "../")
+
+ ("/home/nie/Downloads/" (20130 17929) "map.txt" "install_flash_player_11_linux.i386/" "小小皮肤(从搜狗移植的)/" "Mew/" "./" "auto-complete/" "perl-yas.7z" "babiloo.log" "小小皮肤(从搜狗移植的).7z" "emacs-w3m-1.4.4/" "upload.zip" "install_flash_player_11_linux.i386.tar.gz" "niejieqiang-emacs-557b864.zip" "conkeror_1.0~~pre+git1110192207-~nightly1_all.deb" "songzan-vim-f0eaa37/" "Firefox_wallpaper.png" "fonts/" "conkeror_1.0~~pre+git1110202207-~nightly1_all.deb" "conkeror_1.0~~pre+git1110162207-~nightly1_all.deb" "fonts.7z" "keysnail.xpi" "luolE-leMacs-d465a2f.zip" "vim-mode/" "recentf-1.23.zip" "map.zip" "thunderbird-7.0.1.tar.bz2" "gbpad/" "bliss_600dpi.zip" "#babiloo.log#" "songzan-vim-f0eaa37.zip" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342.tar.gz" "firefox/" "áÀ±VØ/" "create_dir.pl" "firefox-10.0a1.en-US.linux-i686.tar.bz2" "out.ogv" "#.emacs#" "yong-lin-20111012.7z" "emacs-w3m-1.4.4.tar.gz" "vip.ps.gz" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342/" "upload.txt" "yasnippet-0.6.1c.tar.bz2" "recentf-1.23/" "yong-lin-20111020.7z" "熱辣V寶貝.zip" "conkeror_1.0~~pre+git1110132207-~nightly1_all.deb" "keysnail(1).xpi" "blastura-dot-emacs-37550c5.zip" "auto-complete-1.3.1.zip" "count_perl_lwp.pl" "emacs" "yasnippet-0.6.1c/" "../" "org-mode/" "02Bliss.zip" "02Bliss/")
+
+ ("/home/nie/Mail/drafts/" (20129 36722) "./" "#*message*-20111021-232329#" "*message*-20111021-101945" "../" "*message*-20111017-231925")
+
+ ("/home/nie/emacs/keysnail-plugin/" (20130 15494) "builtin-commands-ext.ks.js" "K2Emacs.ks.js" "./" ".keysnail.js" "hok.ks.js" "../")
+
+ ("/home/nie/emacs/.emacs.d/" (20130 12697) "dired-isearch.el" "backup/" "ac-comphist.dat" "shell-completion.elc" "line-num.el" "./" "auto-complete/" "dired-isearch.elc" "mon-css-color.el" "abbrev_defs" "perl-complete/" "line-num.elc" "color-theme/" "mon-css-color.elc" "auto-save-list/" "pde/" "shell-completion.el" "../" "yasnippet/" "dired+.el")
+
+ ("/home/nie/.w3m/" (20130 12089) ".arrived" ".sessions" "./" "w3mel3779o6d" "w3msrc4351-0" "../")
+
+ ("/home/nie/res/perl/" (20129 25703) "map_sort_map.pl" "myPerlSkill.pl" "perldoc-html-5.12.4/" "find_repeat_2phrase.jpg" "./" "Perl高效编程(第2版).pdf" "GraphicsPerl.pdf" "get_repeat_name.jpg" "大骆驼书.pdf" "一句话perl问答(不断更新中).txt" "Oreilly.Perl.Cookbook.2nd.Edition.chm" "map_sort_map.wiki" "rename.pl" "Perl引用入门资料.pdf" "grep_map_sort.txt" "perl编码规范.doc" "探索Perl的File__Find模块.txt" "Perl by Example(Fourth Edition).chm" "Perl循序渐进/" "splice.pl" "rename(冲突).pl" "[合集] 使用Tie__File模块对记录型文件进行原地修改.txt" "sort_hash_by_value.wiki" "公共perl 函数.pl" "Effective Perl ProgrammingWays to WriteBetter, More Idiomatic Perl2nd Edition.pdf" "map_course.txt" "../")
+
+ ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20129 25687) "./" "color-theme-library.el" "../")
+
+ ("/home/nie/.yong/mb/" (20129 23793) "zhengma.ini" "./" "zhengma.txt" "english.txt" "zhengma.ini~" "Untitled" "pypre.bin" "zhengma.txt~" "pinyin.ini" "pinyin.txt" "../")
+
+ ("/media/softpdia/src/" (20127 48587) "test.pl" "reminder.txt" "notebook.pl" "get_fullpath.pl" "#test.pl#" "#notebook.pl#" "../" "./")
+
+ ("/home/nie/res/" (20129 23596) "salary/" "./" "wiki/" "perl/" "pets5/" "unix/" "../")
+
+ ("/home/nie/emacs/.emacs.d/yasnippet/" (20127 61935) "yasnippet.el" "./" "dropdown-list.el" "snippets/" "../" "dropdown-list.elc" "yasnippet.elc")
+
+ ("/home/nie/.yong/" (20128 24764) "user.txt.bak" "yong.chm" "menu.ini" "./" "skin/" "yong.ini" "yong.ini.old" "user.txt" "mb/" "translate.txt" "../")
+
+ ("/home/nie/emacs/.emacs.d/auto-complete/" (20127 61926) "auto-complete-extension.el" "./" "auto-complete-config.elc" "fuzzy.elc" "auto-complete.el" "auto-complete-config.el" "auto-complete.elc" "popup.elc" "popup.el" "fuzzy.el" "auto-complete+.el" "../")
+
+ ("/home/nie/emacs/.emacs.d/color-theme/" (20127 61997) "./" "color-theme.el" "themes/" "../" "color-theme.elc")
+
+ ("/home/nie/Mail/" (20128 58325) "drafts/" "./" "queue/" "postq/" "inbox/" ".mew-uidl" "draft/" ".mew-folder-alist" "Smtplog" ".mew-friend-folder-list.old" ".mew-friend-folder-list" ".mew-uidl.old" ".mew-folder-alist.old" ".mew-alias" "../" ".mew-alias.old")
+
+ ("/home/nie/Downloads/Mew/" (20128 55596) "mew-smime.el" "00changes.5.1" "mew-config.elc" "mew-pick.elc" "00changes.6.2" "mew-bq.elc" "mew-summary4.el" "mew-vars3.el" "mew-gemacs.el" "mew-env.elc" "00changes.2" "mew-demo.elc" "mew-message.elc" "mew-mime.el" "mew-smtp.elc" "mew-varsx.elc" "mew-minibuf.elc" "bin/" "mew-blvs.elc" "mew-local.elc" "00changes.4.1" "./" "mew-edit.el" "mew-summary2.el" "mew-vars2.el" "etc/" "mew-summary3.el" "mew-thread.el" "mew-refile.elc" "mew-mule3.el" "mew-key.elc" "00copyright" "mew-blvs.el" "mew-edit.elc" "mew-imap.el" "00readme" "00copyright.ja" "mew.elc" "mew-darwin.el" "info/" "mew-addrbook.el" "mew-exec.el" "mew-nntp2.el" "Makefile.in" "Makefile" "mew-ext.elc" "mew-mule.elc" "mew-lang-latin.elc" "mew-passwd.el" "mew-imap2.el" "mew-header.elc" "mew-exec.elc" "mew-mark.elc" "mew-pgp.el" "mew-varsx.el" "mew-search.elc" "00api" "mew-mule.el" "mew-mark.el" "mew-unix.el" "mew-const.elc" "mew-net.elc" "mew-ext.el" "mew-complete.el" "mew-unix.elc" "mew-func.elc" "mew-const.el" "mew-demo.el" "mew-local.el" "mew-summary.el" "mew-encode.el" "00changes.6.1" "mew-addrbook.elc" "mew-smime.elc" "config.status" "install-sh" "mew-sort.elc" "mew-summary4.elc" "00changes.6.3" "mew-lang-kr.elc" "mew-func.el" "mew-vars2.elc" "auxiliary.el" "00changes.5.2" "mew-darwin.elc" "00changes" "mew-syntax.el" "mew-summary.elc" "mew-attach.el" "mew-complete.elc" "00changes.3" "mew-encode.elc" "mew-summary2.elc" "mew-smtp.el" "mew-win32.elc" "dot.theme" "mew-ssl.el" "mew-gemacs.elc" "mew-fib.elc" "mew-cache.elc" "mew-syntax.elc" "temp.el" ".gitignore" "mew-thread.elc" "mew-header.el" "mew-message.el" "mew-mule3.elc" "mew-draft.elc" "mew-auth.el" "mew-mime.elc" "mew-draft.el" "mew-vars3.elc" "mew-search.el" "dot.emacs" "mew-nntp.el" "mew-vars.elc" "00diff" "mew-pick.el" "mew-lang-kr.el" "mew-attach.elc" "mew-imap.elc" "mew.el" "mew-ssh.elc" "mew-refile.el" "mew-pop.el" "mew-highlight.elc" "mew-nntp.elc" "mew-env.el" "dot.mew" "00changes.0" "mew-sort.el" "configure.in" "mew-ssh.el" "00changes.1" "mew-scan.elc" "mew-win32.el" "configure" "config.log" "mew-lang-latin.el" ".git/" "mew-vars.el" "mew-highlight.el" "mew-minibuf.el" "mew-pop.elc" "mew-fib.el" "mew-imap2.elc" "mew-auth.elc" "mew-lang-jp.elc" "mew-cache.el" "mew-pgp.elc" "mew-nntp2.elc" "mew-net.el" "mew-virtual.el" "mew-ssl.elc" "mew-config.el" "mew-lang-jp.el" "mew-virtual.elc" "mew-scan.el" "00changes.4.2" "mew-decode.elc" "mew-summary3.elc" "../" "mew-passwd.elc" "mew-bq.el" "mew-key.el" "mew-decode.el")
 
  ("/home/nie/emacs/.emacs.d/vim-mode/" (20127 61110) "vim-insert-mode.elc" "./" "vim-normal-mode.el" "vim-compat.elc" "vim-undo.elc" "vim-undo.el" "vim-insert-mode.el" ".hgtags" "vim-ex.elc" "vim-maps.el" "vim-search.elc" "vim-macs.el" "vim-commands.elc" "vim-motions.el" "vim-ex.el" "vim.elc" "vim-core.elc" ".hgignore" "vim-normal-mode.elc" "vim-visual-mode.elc" "vim-core.el" "vim-defs.elc" "vim-motions.elc" "vim-ex-commands.el" "vim.el" "vim-macs.elc" ".hg/" "vim-window.elc" "vim-keymap.el" "vim-keymap.elc" "vim-compat.el" "vim-search.el" "vim-modes.elc" "vim-commands.el" "vim-scroll.el" "vim-scroll.elc" "vim-defs.el" "vim-modes.el" "vim-maps.elc" "vim-window.el" "vim-ex-commands.elc" "../" "vim-visual-mode.el")
 
- ("/home/nie/src/" (20127 60670) "split_map.pl" "test.txt" "square_map.pl" "map.pl" "./" "test.pl" "shell_exercise.pl" ".#map_increase100.pl" "#map_increase100.pl#" "pwd_map.pl" "html_get_pre.pl" "map_increase100.pl" "#count_perl_lwp.pl#" "count_perl_lwp.pl" "../")
-
- ("/home/nie/" (20127 60566) ".gstreamer-0.10/" ".dbus/" ".ido.last~" ".dmrc" ".conkerorrc" ".emacs~" ".cache/" ".ibus/" ".gconf/" ".themes/" "./" "perl-yas.7z" "babiloo.log" ".gitconfig" "src/" ".gconfd/" ".libreoffice/" ".emacs" ".bashrc" ".keysnail.js" ".profile" ".config/" "res/" ".bash_logout" ".sudo_as_admin_successful" "Firefox_wallpaper.png" "music/" ".ssh/" ".gnome2_private/" "Desktop/" ".nautilus/" ".esd_auth" ".gvfs/" "Documents/" ".recentf~" ".gtk-recordmydesktop" ".eshell/" ".pentadactylrc" ".goldendict/" ".pulse/" "#babiloo.log#" "perl5/" ".adobe/" "Mail/" ".pulse-cookie" ".opera/" ".fonts.conf" ".fonts/" ".icons/" ".macromedia/" "create_dir.pl" ".conkeror.mozdev.org/" "out.ogv" "Music/" "#.emacs#" "Pictures/" ".fontconfig/" "News/" ".compiz/" ".mozilla/" "Videos/" "Downloads/" "tools/" ".cpan/" ".local/" ".linuxmint/" ".gtk-bookmarks" ".xinput.d/" ".xsession-errors.old" ".gnome2/" ".cpanm/" "Templates/" "count_perl_lwp.pl" ".ICEauthority" ".gksu.lock" ".gnupg/" ".thumbnails/" ".bash_history" ".emacs.d/" ".shutter/" "emacs/" ".xsession-errors" "Public/" "../" ".recentf" ".pentadactyl/" ".yong/" ".ido.last")
-
- ("/media/softpdia/src/" (20127 44706) "test.pl" "reminder.txt" "notebook.pl" "get_fullpath.pl" ".#notebook.pl" "#test.pl#" "#notebook.pl#" "../" "./")
-
  ("/media/" (20127 44627) "./" "softpdia/" "../")
 
- ("/home/nie/.emacs.d/" (20127 44588) "ac-comphist.dat" "./" "abbrev_defs" "auto-save-list/" "../")
-
- ("/home/nie/Downloads/" (20127 39802) "map.txt" "install_flash_player_11_linux.i386/" "小小皮肤(从搜狗移植的)/" "./" "auto-complete/" "小小皮肤(从搜狗移植的).7z" "emacs-w3m-1.4.4/" "upload.zip" "install_flash_player_11_linux.i386.tar.gz" "niejieqiang-emacs-557b864.zip" "conkeror_1.0~~pre+git1110192207-~nightly1_all.deb" "fonts/" "conkeror_1.0~~pre+git1110162207-~nightly1_all.deb" "fonts.7z" "luolE-leMacs-d465a2f.zip" "recentf-1.23.zip" "map.zip" "gbpad/" "bliss_600dpi.zip" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342.tar.gz" "firefox/" "firefox-10.0a1.en-US.linux-i686.tar.bz2" "yong-lin-20111012.7z" "emacs-w3m-1.4.4.tar.gz" "ActivePerl-5.14.2.1402-i686-linux-glibc-2.3.6-295342/" "upload.txt" "yasnippet-0.6.1c.tar.bz2" "recentf-1.23/" "conkeror_1.0~~pre+git1110132207-~nightly1_all.deb" "blastura-dot-emacs-37550c5.zip" "auto-complete-1.3.1.zip" "emacs" "yasnippet-0.6.1c/" "../" "02Bliss.zip" "02Bliss/")
-
  ("/home/nie/Documents/" (20127 25311) "while" "sub" "sort" "./" "else" "cperl-mode/" "if" "find" "map" "eval" "unless" "fore" "binperl" "elsif" "grep" "../")
-
- ("/home/nie/emacs/.emacs.d/auto-complete/" (20127 23768) "auto-complete-extension.el" "./" "auto-complete-config.elc" "fuzzy.elc" "auto-complete.el" "auto-complete-config.el" "auto-complete.elc" "popup.elc" "popup.el" "fuzzy.el" "auto-complete+.el" "../")
-
- ("/home/nie/emacs/.emacs.d/color-theme/" (20127 23768) "./" "color-theme.el" "themes/" "../" "color-theme.elc")
-
- ("/home/nie/emacs/.emacs.d/color-theme/themes/" (20127 30724) "./" "color-theme-library.el" "../")
 
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/text-mode/perl-mode/" (20127 26651) "while" "ifee" "sub" "sort" "xfore" "./" "else" "cperl-mode/" "if" "find" "map" "perl" "xunless" "eval" "unless" "ife" "fore" "for" "elsif" "grep" "xif" "../" "xwhile")
 
@@ -98,15 +127,9 @@
 
  ("/home/nie/emacs/.emacs.d/yasnippet/snippets/" (20127 26384) "./" "text-mode/" "../")
 
- ("/home/nie/emacs/.emacs.d/yasnippet/" (20127 26385) "yasnippet.el" "./" "dropdown-list.el" "snippets/" "../")
-
  ("/home/nie/emacs/.emacs.d/perl-complete/" (20124 58114) "./" "anything.el" "anything.elc" "anything-match-plugin.el" "perl-completion.el" "../")
 
- ("/home/nie/.yong/mb/" (20120 4288) "zhengma.ini" "./" "zhengma.txt" "english.txt" "zhengma.ini~" "Untitled" "pypre.bin" "zhengma.txt~" "pinyin.ini" "pinyin.txt" "../")
-
  ("/home/nie/emacs/.git/" (20124 61023) "index" "hooks/" "./" "logs/" "info/" "config" "refs/" "packed-refs" "branches/" "description" "objects/" "HEAD" "../")
-
- ("/home/nie/.yong/" (20124 55432) "user.txt.bak" "yong.chm" "menu.ini" "./" "skin/" "yong.ini" "yong.ini.old" "user.txt" "mb/" "translate.txt" "../")
 
  ("/home/nie/Downloads/gbpad/" (20124 51900) "Makefile.win" "config.h" "Makefile.am" "missing" "po/" "./" "depcomp" "gbpad.rc" "config.h.in" "configure.ac" "gbpad.c" "Makefile.in" "Makefile" "stamp-h1" "gbpad.spec" "ltmain.sh" "data/" "config.status" "install-sh" ".deps/" "gbpad.spec.in" "config.h.in~" "autogen.sh" "README" "INSTALL" "configure" "config.log" ".git/" "ChangeLog" "../" "aclocal.m4")
 

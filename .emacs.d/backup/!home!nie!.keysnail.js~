@@ -479,4 +479,6 @@ key.setCaretKey('M-n', function (ev) {
 }, 'Focus to the previous button');
 
 
-
+key.setGlobalKey('M-x', function (aEvent, aArg) {
+    ext.select(aArg, aEvent);
+}, 'Ext', true);

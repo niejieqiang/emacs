@@ -54,6 +54,9 @@
      (font-lock-reference-face ((t (:foreground "#5080a0"))))
      (font-lock-apply-highlight ((t (:background "#6d8824" :foreground "white"))))
 
+     
+     (font-lock-regexp-grouping-construct ((t (:background "#121212" :foreground "#003030"))))
+     (font-lock-regexp-grouping-backslash ((t (:background "#121212" :foreground "#003030"))))
      (font-lock-add-keywords ((t (:foreground "#a4a338"))))
      (font-lock-compile-keyword ((t (:foreground "#a4a338"))))
      (font-lock-eval-keywords ((t (:foreground "#a4a338"))))
@@ -86,6 +89,11 @@
      (cperl-val ((t (:foreground "#308040"))))
      (cperl-beautify-regexp-piece ((t (:background "#121212" :foreground "#003030"))))
      (cperl-forward-group-in-re ((t (:background "#121212" :foreground "#003030"))))
+     (cperl-backward-to-start-of-continued-exp ((t (:background "#121212" :foreground "#003030"))))
+     (cperl-comment-region ((t (:foreground "#5080a0"))))
+     
+     (cperl-backward-to-noncomment ((t (:background "#121212" :foreground "#9090a0"))))
+                                                    
      (anything-visible-mark ((t (:background "#308040" :foreground "white"))))
      (anything-visible-mark-face ((t (:background "#308040" :foreground "white"))))
      (anything-isearch-match-face ((t (:background "#6d8824" :foreground "white"))))

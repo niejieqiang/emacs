@@ -1,9 +1,14 @@
+(server-start) ;;start server
+
 (add-to-list 'load-path "~/emacs/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/emacs/.emacs.d/auto-complete//ac-dict")
 (ac-config-default)
 (require 'auto-complete-extension)
 (require 'auto-complete+)
+(setq ac-trigger-key "RET")
+(setq ac-auto-start t)
+;;(setq ac-trigger-key "TAB")
 ;;C-n and C-p to select goodies
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
@@ -20,8 +25,6 @@
     (require 'yasnippet) ;; not yasnippet-bundle
     (yas/initialize)
     (yas/load-directory "~/emacs/.emacs.d/yasnippet/snippets")
-
-
 
 (add-to-list 'load-path "~/emacs/.emacs.d/pde/lisp")
 (load "pde-load")
@@ -110,6 +113,10 @@
 
 (setq cperl-highlight-variables-indiscriminately t)
 
+;; (setq tab-width 4) ; or any other  preferred value
+;; (defvaralias 'c-basic-offset 'tab-width)
+;; (defvaralias 'cperl-indent-level 'tab-width)
+
 (add-to-list 'load-path "~/emacs/.emacs.d");;display colors
 (add-hook 'css-mode-hook 'css-color-mode)
 (autoload 'css-mode "css-mode" "" t)
@@ -123,11 +130,17 @@
 (defalias 'ucr 'uncomment-region)
 (defalias 'pb 'perltidy-buffer)
 
+(autoload 'pod-mode "pod-mode" "Mode for editing POD files" t)
+(add-to-list 'auto-mode-alist '("\\.pod$" . pod-mode))
+(add-hook 'pod-mode-hook 'font-lock-mode)
+
 (setq kept-old-versions 2);; version-control 
 (setq kept-new-versions 5)
 (setq delete-old-versions t)
 (setq backup-directory-alist '(("." . "~/emacs/.emacs.d/backup")));;set backup dirs
 (setq backup-by-copying t)
+(setq make-backup-files nil);;不产生备份文件
+
 
 (setq default-directory "~/emacs/")
 
@@ -190,6 +203,37 @@
 (require 'color-theme);;use my favourite theme
 (color-theme-initialize)
 (color-theme-wombat)
+
+
+
+;; (add-to-list 'load-path "~/Downloads/Mew/")
+;; (autoload 'mew "mew" nil t) ;;send mail by mew
+;; (autoload 'mew-send "mew" nil t)
+;; ;; Optional setup (Read Mail menu):
+;; (setq read-mail-command 'mew)
+;; ;; Optional setup (e.g. C-xm for sending a message):
+;; (autoload 'mew-user-agent-compose "mew" nil t)
+;; (if (boundp 'mail-user-agent)
+;;     (setq mail-user-agent 'mew-user-agent))
+;; (if (fboundp 'define-mail-user-agent)
+;;     (define-mail-user-agent
+;;       'mew-user-agent
+;;       'mew-user-agent-compose
+;;       'mew-draft-send-message
+;;       'mew-draft-kill
+;;       'mew-send-hook))
+;; (setq mew-name "niejieqiang") ;; (user-full-name)
+;; (setq mew-user "niejieqiang") ;; (user-login-name)
+;; (setq mew-mail-domain "qq.com")
+;; (setq mew-smtp-server "smtp.qq.com")  ;; if not localhost
+;; (setq mew-smtp-port "465")
+;; (setq mew-proto "%")
+;; (setq mew-imap-user "niejieqiang@qq.com")  ;; (user-login-name)
+;; (setq mew-imap-port "993")
+;; (setq mew-imap-server "imap.qq.com")    ;; if not localhost
+;; (setq mew-use-smtp-auth nil)
+;; (setq mew-use-cached-passwd t)
+
 
 (defun my-maximized-horz ();;maximized when emacs startup
 (interactive)

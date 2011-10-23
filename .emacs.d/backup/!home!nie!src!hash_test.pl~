@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 22 Oct 2011
+# Version: 0.01
+
+use strict;
+use feature('say');
+
+my;
+
+__DATA__
+007
+007
+007
+007
+007
+
+

@@ -1,0 +1,6 @@
+#!/usr/bin/perl -w
+use strict;
+
+my @names = ('Jacob', 'Michael', 'Joshua', 'Matthew', 'Ethan', 'Andrew');
+my @some_names=  splice(@names,1,3);
+print map{$_,"\n"}@some_names;

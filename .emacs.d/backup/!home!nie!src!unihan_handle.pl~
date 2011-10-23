@@ -1,0 +1,77 @@
+#!/usr/bin/perl -w
+# Author: niejieqiang <niejieqiang@qq.com>
+# Created: 22 Oct 2011
+# Version: 0.01
+
+use strict;
+use feature('say');
+
+# my %k_hash;
+# my @var_comment=grep{++$k_hash{$_}<2} grep{/k.*?t/}map{(split/\s+/)[1]}<DATA>;
+# print sort{$a cmp $b}map{"$_ "}@var_comment;
+
+my %u_hash;
+my @u_array=map{split/\sk.*?t(?=\sU)/}grep{!/^\#/} <DATA>;
+foreach (@u_array) {
+    
+}
+
+# foreach (@u_array) {
+#   if (m/(\S+)(\s\S+.*)/) {
+#     $u_hash{$1}.="$2 ";
+#   } 
+# }
+
+# foreach (sort keys %u_hash ) {
+#   print "$_$u_hash{$_}\n";
+# }
+
+
+#  map{$u_hash{$1}.="$2" if m/([a-z](\s\S+.*))/}@u_array;
+# map{print "$_$u_hash{$_}\n"}sort keys %u_hash;
+
+__DATA__
+# This file contains data on the following fields from the Unihan database:
+# kCompatibilityVariant
+# kSemanticVariant
+# kSimplifiedVariant
+# kSpecializedSemanticVariant
+# kTraditionalVariant
+# kZVariant
+#
+# For details on the file format, see http://www.unicode.org/reports/tr38/
+#
+U+3400 kSemanticVariant U+4E18
+U+3405 kSemanticVariant U+4E94<kMatthews
+U+342B kSemanticVariant U+51F6
+U+342E kSemanticVariant U+8944
+U+342F kSemanticVariant U+5EB8
+U+3431 kSemanticVariant U+9B12<kMatthews
+U+3434 kSemanticVariant U+6500
+U+3441 kSemanticVariant U+20B74
+U+3444 kSemanticVariant U+4FAE<kMatthews
+U+344C kSemanticVariant U+5C29<kMatthews
+U+345D kSemanticVariant U+22671<kMeyerWempe
+U+3469 kTraditionalVariant U+5138
+U+346E kSimplifiedVariant U+2B748
+U+346F kSimplifiedVariant U+3454
+U+346F kTraditionalVariant U+3454
+U+3473 kSimplifiedVariant U+3447
+U+3473 kTraditionalVariant U+3447
+U+3487 kSemanticVariant U+511B<kMatthews
+U+348B kSemanticVariant U+5EDD<kMatthews U+53AE<kMatthews
+U+3493 kSimplifiedVariant U+20242
+U+3493 kTraditionalVariant U+20242
+U+349A kSemanticVariant U+7A69<kFenn,kMatthews
+U+349A kSpecializedSemanticVariant U+6587<kFenn
+U+349E kSemanticVariant U+5136<kMatthews
+U+34B0 kSemanticVariant U+5168<kMatthews
+U+34B2 kSemanticVariant U+8CA1<kMatthews
+U+34B7 kSemanticVariant U+8208<kLau,kMatthews
+U+34B7 kSpecializedSemanticVariant U+8208<kFenn
+U+34C1 kSemanticVariant U+7F51<kMatthews
+U+34DF kSpecializedSemanticVariant U+62AB<kMeyerWempe
+U+34E5 kTraditionalVariant U+528F
+U+34E8 kSimplifiedVariant U+523E
+U+34E8 kTraditionalVariant U+523E
+
