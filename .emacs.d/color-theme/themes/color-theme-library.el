@@ -91,9 +91,10 @@
      (cperl-forward-group-in-re ((t (:background "#121212" :foreground "#003030"))))
      (cperl-backward-to-start-of-continued-exp ((t (:background "#121212" :foreground "#003030"))))
      (cperl-comment-region ((t (:foreground "#5080a0"))))
-     
+
      (cperl-backward-to-noncomment ((t (:background "#121212" :foreground "#9090a0"))))
-                                                    
+
+     
      (anything-visible-mark ((t (:background "#308040" :foreground "white"))))
      (anything-visible-mark-face ((t (:background "#308040" :foreground "white"))))
      (anything-isearch-match-face ((t (:background "#6d8824" :foreground "white"))))
