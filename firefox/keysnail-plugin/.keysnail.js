@@ -23,7 +23,6 @@ key.suspendKey           = "<f2>";
 
 // ================================= Hooks ================================= //
 
-
 hook.setHook('KeyBoardQuit', function (aEvent) {
     if (key.currentKeySequence.length) {
         return;
@@ -47,7 +46,6 @@ hook.setHook('KeyBoardQuit', function (aEvent) {
         key.generateKey(aEvent.originalTarget, KeyEvent.DOM_VK_ESCAPE, true);
     }
 });
-
 
 // ============================= Key bindings ============================== //
 
@@ -148,15 +146,15 @@ key.setViewKey('u', function (ev) {
     undoCloseTab();
 }, 'Undo closed tab');
 
-key.setViewKey('t', function (ev) {
-    getBrowser().mTabContainer.advanceSelectedTab(1, true);
-}, 'Select next tab');
+key.setViewKey([['C-='], ['.']], function (ev) {
+    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_RIGHT, true);
+}, 'Scroll right');
 
-key.setViewKey('T', function (ev) {
+key.setViewKey('t', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(-1, true);
 }, 'Select previous tab');
 
-key.setViewKey([['C-n'], ['j']], function (ev) {
+key.setViewKey([['T'], ['j']], function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
 }, 'Scroll line down');
 
@@ -164,17 +162,13 @@ key.setViewKey([['C-p'], ['k']], function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_UP, true);
 }, 'Scroll line up');
 
-key.setViewKey([['C-f'], ['.']], function (ev) {
-    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_RIGHT, true);
-}, 'Scroll right');
-
-key.setViewKey([['C-b'], [',']], function (ev) {
-    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
-}, 'Scroll left');
-
-key.setViewKey([['M-v'], ['b']], function (ev) {
+key.setViewKey([['b'], ['M-v']], function (ev) {
     goDoCommand("cmd_scrollPageUp");
 }, 'Scroll page up');
+
+key.setViewKey(',', function (ev) {
+    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
+}, 'Scroll left');
 
 key.setViewKey('C-v', function (ev) {
     goDoCommand("cmd_scrollPageDown");
@@ -239,6 +233,10 @@ key.setViewKey(['C-c', 'C-e'], function (aEvent, aArg) {
 key.setViewKey('d', function (ev) {
     BrowserCloseTabOrWindow();
 }, 'Close tab ');
+
+key.setViewKey('C-f', function (ev) {
+    getBrowser().mTabContainer.advanceSelectedTab(1, true);
+}, 'Select next tab');
 
 key.setEditKey(['C-x', 'h'], function (ev) {
     command.selectAll(ev);

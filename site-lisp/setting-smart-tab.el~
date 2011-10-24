@@ -1,0 +1,4 @@
+(add-to-list 'load-path "~/emacs/site-lisp/smart-tabs-mode/")
+(require 'smart-tabs-mode)
+
+(provide 'setting-smart-tab)
