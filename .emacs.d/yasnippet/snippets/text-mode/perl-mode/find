@@ -1,3 +1,0 @@
-find( \&${1:subroutine}, ${2:dir});
- 
-$3

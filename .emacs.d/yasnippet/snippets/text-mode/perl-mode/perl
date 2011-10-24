@@ -1,7 +1,0 @@
-#!/usr/bin/perl -w
-#author:niejieqiang
-
-use strict;
-use feature('say');
-
-$1

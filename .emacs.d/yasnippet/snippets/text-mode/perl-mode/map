@@ -1,3 +1,0 @@
-#name : map{ ... }
-# --
-$0 map{ ${1:expression} }
