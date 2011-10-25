@@ -3,4 +3,3 @@
 (autoload 'css-color-mode "mon-css-color" "" t)
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 
-(provide 'setting-css-color)

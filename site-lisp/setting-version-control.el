@@ -5,4 +5,3 @@
 (setq backup-by-copying t)
 (setq make-backup-files nil);;dont produce ## file
 
-(provide 'setting-version-control)

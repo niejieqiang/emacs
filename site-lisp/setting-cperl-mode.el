@@ -57,4 +57,3 @@
 (define-key global-map "\M-[" 'hs-hide-block) ;;hide sub
 (define-key global-map "\M-]" 'hs-show-block) ;;show sub
 
-(provide 'setting-cperl-mode)

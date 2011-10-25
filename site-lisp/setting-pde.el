@@ -1,6 +1,8 @@
 (add-to-list 'load-path "~/emacs/site-lisp/pde/lisp")
 (load "pde-load")
 
+(require 'template-simple)
+
 (global-set-key (kbd "C-c s") 'compile-dwim-compile)
 (global-set-key (kbd "C-c r") 'compile-dwim-run)
 (setq compilation-buffer-name-function 'pde-compilation-buffer-name)
@@ -34,4 +36,3 @@
 ;;┃              ,-/ `           ,-/           ┃
 ;;┗━━━━━━━━━━━━━━━━━━━━━━┛ 
 
-(provide 'setting-pde)

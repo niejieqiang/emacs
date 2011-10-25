@@ -6,7 +6,7 @@
 (setq confirm-nonexistent-file-or-buffer nil);;don't confirm when creat new file or buffer
 (setq confirm-kill-buffer nil)
 
-(provide 'setting-dired)
+
 
 
 

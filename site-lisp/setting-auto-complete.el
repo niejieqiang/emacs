@@ -19,4 +19,4 @@
 
 (global-auto-complete-mode t)           ;;enable global-mode
 
-(provide 'setting-auto-complete)
+

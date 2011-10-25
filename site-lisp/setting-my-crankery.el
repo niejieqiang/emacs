@@ -1,7 +1,14 @@
 (setq default-directory "~/emacs/")
 
+(setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
+(setq sentence-end-double-space nil)
+;;设置 sentence-end 可以识别中文标点。不用在 fill 时在句号后插
+
 (ido-mode nil)
-(setq tramp-default-method "ftp") ;;disable tramp
+;;(setq tramp-default-method "ftp") ;;disable tramp
+
+(require 'saveplace) ;;save last position of cursor
+(setq-default save-place t)
 
 (setq user-full-name "niejieqiang");;personal info
 (setq user-mail-address "niejieqiang@qq.com")
@@ -39,12 +46,28 @@
 (setq resize-mini-windows nil);;Mini buffer won't resize automaticly
 
 (global-set-key [f12] (quote shell));;press f12 enter to shell mode
-(define-key global-map "\C-h" 'backward-delete-char) ;;C-h to delete a char as backspace
-(define-key global-map "\M-;" 'comment-or-uncomment-region) ;;comment or uncomment
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "\C-h") 'backward-delete-char) ;;C-h to delete a char as backspace
+(global-set-key (kbd "M-;") 'comment-or-uncomment-region) ;;comment or uncomment
 (defalias 'eb 'eval-buffer)
 (defalias 'cr 'comment-region)
 (defalias 'ucr 'uncomment-region)
 (defalias 'pb 'perltidy-buffer)
+
+;;(defun jbr-init ()
+;;  "Called from term-setup-hook after the default
+;;terminal setup is
+;;done or directly from startup if term-setup-hook not
+;;used.  The value
+;;0xF030 is the command for maximizing a window."
+;;  (interactive)
+;;  (w32-send-sys-command #xf030)
+;;  (ecb-redraw-layout)
+;;  (calendar)
+;;)
+;;(setq term-setup-hook 'jbr-init)
+;;(setq window-setup-hook 'jbr-init)
+
 
 (defun my-maximized-horz ();;maximized when emacs startup
 (interactive)
@@ -67,4 +90,4 @@ nil 0 nil "_NET_WM_STATE" 32
 '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
 (my-maximized)
 
-(provide 'setting-my-crankery)
+
