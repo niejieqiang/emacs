@@ -154,7 +154,7 @@ key.setViewKey('t', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(-1, true);
 }, 'Select previous tab');
 
-key.setViewKey([['T'], ['j']], function (ev) {
+key.setViewKey([['C-n'], ['j']], function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
 }, 'Scroll line down');
 
@@ -242,7 +242,7 @@ key.setEditKey(['C-x', 'h'], function (ev) {
     command.selectAll(ev);
 }, 'Select whole text', true);
 
-key.setEditKey([['C-x', 'u'], ['C-_']], function (ev) {
+key.setEditKey([['C-x', 'u'], ['C-/']], function (ev) {
     display.echoStatusBar("Undo!", 2000);
     goDoCommand("cmd_undo");
 }, 'Undo');
@@ -267,7 +267,7 @@ key.setEditKey(['C-x', 'r', 'y'], function (ev) {
     command.yankRectangle(ev.originalTarget, command.kill.buffer);
 }, 'Yank the last killed rectangle with upper left corner at point', true);
 
-key.setEditKey([['C-SPC'], ['C-@']], function (ev) {
+key.setEditKey([['C-@'], ['M-SPC']], function (ev) {
     command.setMark(ev);
 }, 'Set the mark', true);
 
@@ -457,7 +457,7 @@ key.setCaretKey('z', function (ev) {
     command.recenter(ev);
 }, 'Scroll to the cursor position');
 
-key.setCaretKey([['C-SPC'], ['C-@']], function (ev) {
+key.setCaretKey([['C-@'], ['M-SPC']], function (ev) {
     command.setMark(ev);
 }, 'Set the mark', true);
 

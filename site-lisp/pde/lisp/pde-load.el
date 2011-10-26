@@ -117,13 +117,14 @@
           try-complete-lisp-symbol-partially
           try-expand-whole-kill))
 
+
   (global-set-key "\C-m" 'newline-and-indent)
   (global-set-key "\C-j" 'newline)
   (global-set-key (kbd "M-'") 'just-one-space)
   (global-set-key (kbd "C-M-=") 'pde-indent-dwim)
   ;; nearest key to dabbrev-expand
-  (global-set-key (kbd "M-;") 'hippie-expand)
-  (global-set-key (kbd "C-;") 'comment-dwim)
+  (global-set-key (kbd "M-/") 'hippie-expand)
+  (global-set-key (kbd "M-;") 'comment-dwim)
   (global-set-key "\C-cf" 'comint-dynamic-complete)
   (global-set-key "\C-cs" 'compile-dwim-compile)
   (global-set-key "\C-cr" 'compile-dwim-run)

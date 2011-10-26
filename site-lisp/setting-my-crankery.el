@@ -4,7 +4,7 @@
 (setq sentence-end-double-space nil)
 ;;设置 sentence-end 可以识别中文标点。不用在 fill 时在句号后插
 
-(ido-mode nil)
+;;(ido-mode nil)
 ;;(setq tramp-default-method "ftp") ;;disable tramp
 
 (require 'saveplace) ;;save last position of cursor
@@ -46,9 +46,9 @@
 (setq resize-mini-windows nil);;Mini buffer won't resize automaticly
 
 (global-set-key [f12] (quote shell));;press f12 enter to shell mode
-(global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "\C-h") 'backward-delete-char) ;;C-h to delete a char as backspace
-(global-set-key (kbd "M-;") 'comment-or-uncomment-region) ;;comment or uncomment
+(global-set-key (kbd "M-SPC") 'set-mark-command) ;;C-h to delete a char as backspace
+
 (defalias 'eb 'eval-buffer)
 (defalias 'cr 'comment-region)
 (defalias 'ucr 'uncomment-region)
