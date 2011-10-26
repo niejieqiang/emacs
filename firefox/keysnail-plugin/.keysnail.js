@@ -93,14 +93,6 @@ key.setGlobalKey(['C-x', 'k'], function (ev) {
     BrowserCloseTabOrWindow();
 }, 'Close tab / window');
 
-key.setGlobalKey(['C-x', 'K'], function (ev) {
-    closeWindow(true);
-}, 'Close the window');
-
-key.setGlobalKey(['C-x', 'n'], function (ev) {
-    OpenBrowserWindow();
-}, 'Open new window');
-
 key.setGlobalKey(['C-x', 'C-c'], function (ev) {
     goQuitApplication();
 }, 'Exit Firefox', true);
@@ -150,7 +142,7 @@ key.setViewKey([['C-='], ['.']], function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_RIGHT, true);
 }, 'Scroll right');
 
-key.setViewKey('t', function (ev) {
+key.setViewKey('T', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(-1, true);
 }, 'Select previous tab');
 
@@ -234,7 +226,7 @@ key.setViewKey('d', function (ev) {
     BrowserCloseTabOrWindow();
 }, 'Close tab ');
 
-key.setViewKey('C-f', function (ev) {
+key.setViewKey('t', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(1, true);
 }, 'Select next tab');
 
@@ -266,6 +258,14 @@ key.setEditKey(['C-x', 'r', 'k'], function (ev, arg) {
 key.setEditKey(['C-x', 'r', 'y'], function (ev) {
     command.yankRectangle(ev.originalTarget, command.kill.buffer);
 }, 'Yank the last killed rectangle with upper left corner at point', true);
+
+key.setEditKey(['C-x', 'l'], function (ev) {
+    command.focusToById("urlbar");
+}, 'Focus to the location bar', true);
+
+key.setEditKey(['C-x', 'g'], function (ev) {
+    command.focusToById("searchbar");
+}, 'Focus to the search bar', true);
 
 key.setEditKey([['C-@'], ['M-SPC']], function (ev) {
     command.setMark(ev);
@@ -492,3 +492,11 @@ key.setCaretKey('M-p', function (ev) {
 key.setCaretKey('M-n', function (ev) {
     command.walkInputElement(command.elementsRetrieverButton, false, true);
 }, 'Focus to the previous button');
+
+key.setGlobalKey(['C-x', 'n'], function (ev) {
+    command.walkInputElement(command.elementsRetrieverTextarea, true, true);
+}, 'Focus to the next text area');
+
+key.setGlobalKey(['C-x', 'p'], function (ev) {
+    command.walkInputElement(command.elementsRetrieverTextarea, false, true);
+}, 'Focus to the previous text area');
