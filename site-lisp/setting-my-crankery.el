@@ -4,9 +4,6 @@
 (setq sentence-end-double-space nil)
 ;;设置 sentence-end 可以识别中文标点。不用在 fill 时在句号后插
 
-;;(ido-mode nil)
-;;(setq tramp-default-method "ftp") ;;disable tramp
-
 (require 'saveplace) ;;save last position of cursor
 (setq-default save-place t)
 

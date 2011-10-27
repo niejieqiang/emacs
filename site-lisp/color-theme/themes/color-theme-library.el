@@ -62,8 +62,11 @@
      (cperl-forward-group-in-re ((t (:background "#121212" :foreground "#003030"))))
      (cperl-backward-to-start-of-continued-exp ((t (:background "#121212" :foreground "#003030"))))
      (cperl-comment-region ((t (:foreground "#5080a0"))))
-
+     
      (cperl-backward-to-noncomment ((t (:background "#121212" :foreground "#9090a0"))))
+
+     (ffap ((t (:background "#121212" :foreground "#308040"))))
+     (highlight ((((class color) (min-colors 88) (background dark)) (:background "#6d8824" :foreground "white"))))
 
      
      (anything-visible-mark ((t (:background "#308040" :foreground "white"))))
@@ -100,7 +103,7 @@
      (diredp-date-time ((t (:foreground "#9090a0"))))
 )))
 
-(add-to-list 'color-themes '(color-theme-wombat "color-theme-wombat" "wombat"))
+(add-to-list 'color-themes '(color-theme-wombat "color-theme-wombat"))
 (provide 'color-theme-wombat)
 
 

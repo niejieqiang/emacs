@@ -118,7 +118,7 @@
           try-expand-whole-kill))
 
 
-  (global-set-key "\C-m" 'newline-and-indent)
+;;(global-set-key "\C-m" 'newline-and-indent)
   (global-set-key "\C-j" 'newline)
   (global-set-key (kbd "M-'") 'just-one-space)
   (global-set-key (kbd "C-M-=") 'pde-indent-dwim)
