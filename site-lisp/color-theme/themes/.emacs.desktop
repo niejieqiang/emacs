@@ -1,0 +1,106 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Oct 27 00:09:31 2011
+;; Desktop file format version 206
+;; Emacs version 23.2.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list '("./TAGS" "../TAGS" "../../TAGS"))
+(setq search-ring '("ffap" "Highlight " "highlight" "cursor"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/emacs/site-lisp/color-theme/themes/" "/home/nie/emacs/site-lisp/color-theme/themes/color-theme-library.el" "/home/nie/.emacs" "/usr/share/emacs/23.2/lisp/loaddefs.el" "/home/nie/emacs/site-lisp/color-theme/themes/color-theme-library.el" "/home/nie/tools/1.txt" "/home/nie/.yong/skin/baidu/baidu_hover.png" "~/emacs/site-lisp/setting-session.el" "~/.emacs" "~/emacs/site-lisp/color-theme/themes/color-theme-library.el" "/home/nie/emacs/site-lisp/desktop/desktop.el" "/home/nie/emacs/site-lisp/setting-wcy-recentf.el" "~/emacs/site-lisp/desktop" "~/emacs/site-lisp/setting-css-color.el" "~/emacs/site-lisp/abbrev_defs" "/home/nie/emacs/site-lisp/abbrev_defs" "~/emacs/site-lisp/setting-wcy-recentf.el" "/home/nie/emacs/site-lisp/wcy-recentf/wcy-recentf.el" "/home/nie/emacs/site-lisp/setting-css-color.el" "~/emacs/site-lisp/setting-my-crankery.el" "/home/nie/emacs/site-lisp/pde/lisp/pde-load.el" "~/emacs/site-lisp/setting-weblogger.el" "/home/nie/emacs/site-lisp/setting-my-crankery.el" "~/emacs/site-lisp/wcy-recentf/wcy-recentf.el" "~/emacs/site-lisp/setting-wcy-desktop.el.bak" "~/emacs/site-lisp/nxhtml/README.txt" "/home/nie/emacs/site-lisp/setting-wcy-desktop.el" "/home/nie/emacs/README"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/nie/emacs/site-lisp/color-theme/themes/color-theme-library.el"
+  "color-theme-library.el"
+  'emacs-lisp-mode
+  '(auto-complete-mode linum-mode yas/minor-mode)
+  3626
+  '(3542 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/nie/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(auto-complete-mode linum-mode yas/minor-mode)
+  64
+  '(64 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/nie/tools/1.txt"
+  "1.txt"
+  'text-mode
+  '(linum-mode yas/minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/nie/.yong/skin/baidu/baidu_hover.png"
+  "baidu_hover.png"
+  'image-mode
+  '(linum-mode yas/minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . no-conversion) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/nie/emacs/site-lisp/setting-session.el"
+  "setting-session.el"
+  'emacs-lisp-mode
+  '(auto-complete-mode linum-mode yas/minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "site-lisp"
+  'dired-mode
+  '(linum-mode yas/minor-mode)
+  1601
+  '(nil nil)
+  t
+  '("/home/nie/emacs/site-lisp/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/nie/emacs/site-lisp/desktop/desktop.el"
+  "desktop.el"
+  'emacs-lisp-mode
+  '(auto-complete-mode linum-mode yas/minor-mode)
+  50008
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/usr/share/emacs/23.2/lisp/loaddefs.el"
+  "loaddefs.el"
+  'emacs-lisp-mode
+  '(auto-complete-mode linum-mode yas/minor-mode)
+  362854
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
