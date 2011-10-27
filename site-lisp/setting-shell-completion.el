@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/emacs/site-lisp/shell-completion")
+
 (require 'shell-completion)
 
 
@@ -36,3 +36,7 @@
        (string-match "exited abnormally with code.*" state)
        (string-match "finished" state))
       (kill-buffer (current-buffer))))
+
+
+ (add-to-list 'process-coding-system-alist ;;remove ^M char
+              '("bash" . (undecided-dos . undecided-unix)))

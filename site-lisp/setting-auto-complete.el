@@ -1,8 +1,8 @@
-(add-to-list 'load-path "~/emacs/site-lisp/auto-complete")
+
 (require 'auto-complete)
 (require 'auto-complete-extension)
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/emacs/site-lisp/auto-complete//ac-dict")
+
 (ac-config-default)
 ;;C-n and C-p to select goodies
 (setq ac-use-menu-map t)

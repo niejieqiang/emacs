@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/emacs/site-lisp/color-theme/")
+
 (require 'color-theme);;use my favourite theme
 (color-theme-initialize)
 (color-theme-wombat)

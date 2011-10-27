@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/emacs/site-lisp/session/")
+
 (require 'session)
 
 (add-hook 'after-init-hook 'session-initialize)

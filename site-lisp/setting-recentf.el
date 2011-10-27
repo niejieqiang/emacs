@@ -6,7 +6,7 @@
 (require 'recentf)
 (setq tramp-default-method "ftp")
 
-(add-to-list 'load-path (expand-file-name "~/emacs/site-lisp/recentf/"))
+
 (require 'recentf-ext)
 
 (load "recentf-buffer")

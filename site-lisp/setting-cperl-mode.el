@@ -16,7 +16,7 @@
 ;; ;;┃              ,-/ `           ,-/           ┃
 ;; ;;┗━━━━━━━━━━━━━━━━━━━━━━┛ 
 
-(add-to-list 'load-path "~/emacs/site-lisp/pde/lisp")
+
 (load "pde-load")
 
 
@@ -39,7 +39,7 @@
 
 ;; -----------------------------------------------
 
-(add-to-list 'load-path "~/emacs/site-lisp/auto-complete")
+
 
 (add-hook  'cperl-mode-hook
            (lambda ()
