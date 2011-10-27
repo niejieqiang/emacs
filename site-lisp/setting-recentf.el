@@ -1,3 +1,8 @@
+
+(require 'saveplace) ;;save last position of cursor
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/.emacs-places")
+
 (require 'recentf)
 (setq tramp-default-method "ftp")
 
