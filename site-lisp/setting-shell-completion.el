@@ -1,6 +1,30 @@
 (add-to-list 'load-path "~/emacs/site-lisp/shell-completion")
 (require 'shell-completion)
 
+
+;;                            _(\_/) 
+;;                          ,((((^`\
+;;                         ((((  (6 \ 
+;;                       ,((((( ,    \
+;;   ,,,_              ,(((((  /"._  ,`,
+;;  ((((\\ ,...       ,((((   /    `-.-'
+;;  )))  ;'    `"'"'""((((   (      
+;; (((  /            (((      \
+;;  )) |                      |
+;; ((  |        .       '     |
+;; ))  \     _ '      `t   ,.')
+;; (   |   y;- -,-""'"-.\   \/  
+;; )   / ./  ) /         `\  \
+;;    |./   ( (           / /'
+;;    ||     \\          //'|
+;;    ||      \\       _//'||
+;;    ||       ))     |_/  ||
+;;    \_\     |_/          ||
+;;    `'"                  \_\
+;;                         `'"       `"".
+
+
+
 (add-hook 'shell-mode-hook 'wcy-shell-mode-hook-func);;quite shell mode after enter exit cmd
 (defun wcy-shell-mode-hook-func  ()
   (set-process-sentinel (get-buffer-process (current-buffer))

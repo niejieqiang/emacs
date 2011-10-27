@@ -1,5 +1,12 @@
 (setq default-directory "~/emacs/")
 
+;; ╭┴┴—————┴┴╮
+;; │　　　 　  　　│＼｜／
+;; │　●　 　　●　│—☆—
+;; │○　╰┬┬┬╯　○│／｜＼
+;; │　　 ╰—╯　 ／
+;; ╰—┬○————┬○╯
+
 (setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
 (setq sentence-end-double-space nil)
 ;;设置 sentence-end 可以识别中文标点。不用在 fill 时在句号后插
@@ -10,6 +17,14 @@
 (setq-default kill-whole-line 1);;C-k delete whole line when at the head
 (global-linum-mode 1);;use line number
 (auto-image-file-mode 1);view image by emacs
+
+;; │＼＿＿╭╭╭╭╭＿＿／│
+;; │　　　　　　　　　　　│　　　╭──────╮
+;; │　　　　　　　　　　　│　　　│ 　哇來嚕 　│
+;; │　＞　　　　　　　＜　│　╭╮│ 要LINUX唷!　│
+;; │≡　　╰┬┬┬╯　　≡│Ｏ╰╯╰──────╯
+;; │　　　　╰─╯　　　　│　
+;; ╰──┬Ｏ───Ｏ┬──╯
 
 (auto-compression-mode 1);;compress/uncompress files
 
@@ -48,23 +63,19 @@
 (defalias 'ucr 'uncomment-region)
 (defalias 'pb 'perltidy-buffer)
 
-(if (eq system-type 'windows-nt);;maxmize when in windows
-    (defun jbr-init ()
-      "Called from term-setup-hook after the default
-terminal setup is
-done or directly from startup if term-setup-hook not
-used.  The value
-0xF030 is the command for maximizing a window."
-      (interactive)
-      (w32-send-sys-command #xf030)
-      (ecb-redraw-layout)
-      (calendar)
-      )
-    (setq term-setup-hook 'jbr-init)
-    (setq window-setup-hook 'jbr-init))
+(defun maximize-frame ()
+  "Maximizes the active frame in Windows"
+  (interactive)
+  ;; Send a `WM_SYSCOMMAND' message to the active frame with the
+  ;; `SC_MAXIMIZE' parameter.
+  (when (eq system-type 'windows-nt)
+    (w32-send-sys-command 61488)))
+(add-hook 'window-setup-hook 'maximize-frame t)
 
-(if (equal system-type 'linux) ;;so did linux as above
-    (defun my-maximized-horz ()
+
+(when (equal system-type 'gnu/linux) ;;so did linux as above
+    (progn
+     (defun my-maximized-horz ()
       (interactive)
       (x-send-client-message
        nil 0 nil "_NET_WM_STATE" 32
@@ -83,4 +94,4 @@ used.  The value
       (x-send-client-message
        nil 0 nil "_NET_WM_STATE" 32
        '(1 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
-    (my-maximized))
+    (my-maximized)))

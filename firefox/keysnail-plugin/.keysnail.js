@@ -114,6 +114,14 @@ key.setGlobalKey(['C-x', 'C-s'], function (ev) {
     saveDocument(window.content.document);
 }, 'Save current page to the file', true);
 
+key.setGlobalKey(['C-x', 'n'], function (ev) {
+    command.walkInputElement(command.elementsRetrieverTextarea, true, true);
+}, 'Focus to the next text area');
+
+key.setGlobalKey(['C-x', 'p'], function (ev) {
+    command.walkInputElement(command.elementsRetrieverTextarea, false, true);
+}, 'Focus to the previous text area');
+
 key.setGlobalKey('M-w', function (ev) {
     command.copyRegion(ev);
 }, 'Copy selected text', true);
@@ -340,7 +348,7 @@ key.setEditKey('M-d', function (ev) {
     command.deleteForwardWord(ev);
 }, 'Delete forward word');
 
-key.setEditKey([['C-<backspace>'], ['M-<delete>']], function (ev) {
+key.setEditKey('M-<delete>', function (ev) {
     command.deleteBackwardWord(ev);
 }, 'Delete backward word');
 
@@ -492,11 +500,3 @@ key.setCaretKey('M-p', function (ev) {
 key.setCaretKey('M-n', function (ev) {
     command.walkInputElement(command.elementsRetrieverButton, false, true);
 }, 'Focus to the previous button');
-
-key.setGlobalKey(['C-x', 'n'], function (ev) {
-    command.walkInputElement(command.elementsRetrieverTextarea, true, true);
-}, 'Focus to the next text area');
-
-key.setGlobalKey(['C-x', 'p'], function (ev) {
-    command.walkInputElement(command.elementsRetrieverTextarea, false, true);
-}, 'Focus to the previous text area');

@@ -9,6 +9,19 @@
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
+;;---------------------------------------
+;;       ,-.,-.  
+;;      (  (  (        
+;;       \  )  ) _..-.._   
+;;      __)/ ,','       `.
+;;    ,"     `.     ,--.  `.     
+;;  ,"   @        .'    `   \
+;; (Y            (           ;''.
+;;  `--.____,     \          ,  ; 
+;;  ((_ ,----' ,---'      _,'_,'    
+;;      (((_,- (((______,-'
+;;---------------------------------------
+
 (setq-default ac-sources '(
 			   ac-source-words-in-buffer
 			   ac-source-words-in-same-mode-buffers
