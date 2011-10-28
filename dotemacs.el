@@ -20,5 +20,5 @@
 ;; ┴┬┴┬┴┬┴ ＼＿＿＿＼　　　　 ﹨／▔＼﹨／▔＼▲△▲▲╓╥╥╥╥╥╥╥╥＼　　 ∕　 ／▔﹨　／▔﹨
 
 
-
+(load "~/emacs/site-lisp/subdirs.el")
 (mapc 'load (directory-files "~/emacs/site-lisp/" t "\\.el$"))
