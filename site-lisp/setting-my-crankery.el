@@ -11,6 +11,17 @@
 (setq sentence-end-double-space nil)
 ;;设置 sentence-end 可以识别中文标点。不用在 fill 时在句号后插
 
+(blink-cursor-mode -1);;cursor dont blink
+(transient-mark-mode 1)
+
+
+(setq next-line-add-newlines nil);;dont add a new line when the cursor move to to the line
+
+
+(setq scroll-step 1;;scroll slowly
+scroll-margin 3
+scroll-conservatively 10000)
+
 (setq user-full-name "niejieqiang");;personal info
 (setq user-mail-address "niejieqiang@qq.com")
 
