@@ -1,6 +1,4 @@
-
 (require 'shell-completion)
-
 
 ;;                            _(\_/) 
 ;;                          ,((((^`\

@@ -1,9 +1,10 @@
-
 (require 'auto-complete)
 (require 'auto-complete-extension)
-(require 'auto-complete-config)
 
+(add-to-list 'ac-dictionary-directories "~/emacs/site-lisp/auto-complete/ac-dict/")
+(require 'auto-complete-config)
 (ac-config-default)
+
 ;;C-n and C-p to select goodies
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
