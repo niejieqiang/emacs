@@ -154,7 +154,7 @@ key.setViewKey('T', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(-1, true);
 }, 'Select previous tab');
 
-key.setViewKey([['C-n'], ['j']], function (ev) {
+key.setViewKey('j', function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
 }, 'Scroll line down');
 
@@ -252,7 +252,10 @@ key.setEditKey(['C-x', 'r', 'd'], function (ev, arg) {
 }, 'Delete text in the region-rectangle', true);
 
 key.setEditKey(['C-x', 'r', 't'], function (ev) {
-    prompt.read("String rectangle: ", function (aStr, aInput) {command.replaceRectangle(aInput, aStr);}, ev.originalTarget);
+    prompt.read("String rectangle: ", function (aStr, aInput) {
+        command.replaceRectangle(aInput, aStr);
+    },
+    ev.originalTarget);
 }, 'Replace text in the region-rectangle with user inputted string', true);
 
 key.setEditKey(['C-x', 'r', 'o'], function (ev) {
@@ -376,9 +379,16 @@ key.setEditKey('C-M-y', function (ev) {
     if (!command.kill.ring.length) {
         return;
     }
-    let (ct = command.getClipboardText()) (!command.kill.ring.length || ct != command.kill.ring[0]) &&
-        command.pushKillRing(ct);
-    prompt.selector({message: "Paste:", collection: command.kill.ring, callback: function (i) {if (i >= 0) {key.insertText(command.kill.ring[i]);}}});
+    let(ct = command.getClipboardText())(!command.kill.ring.length || ct != command.kill.ring[0]) && command.pushKillRing(ct);
+    prompt.selector({
+        message: "Paste:",
+        collection: command.kill.ring,
+        callback: function (i) {
+            if (i >= 0) {
+                key.insertText(command.kill.ring[i]);
+            }
+        }
+    });
 }, 'Show kill-ring and select text to paste', true);
 
 key.setEditKey('C-w', function (ev) {
@@ -500,3 +510,7 @@ key.setCaretKey('M-p', function (ev) {
 key.setCaretKey('M-n', function (ev) {
     command.walkInputElement(command.elementsRetrieverButton, false, true);
 }, 'Focus to the previous button');
+
+key.setViewKey('C-n', function (ev) {
+    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_DOWN, true);
+}, 'Scroll line down');

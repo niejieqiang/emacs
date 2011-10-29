@@ -14,7 +14,6 @@
 (blink-cursor-mode -1);;cursor dont blink
 (transient-mark-mode 1)
 
-
 (setq next-line-add-newlines nil);;dont add a new line when the cursor move to to the line
 
 
@@ -64,6 +63,7 @@ scroll-conservatively 10000)
 
 (setq default-major-mode 'text-mode);;text mode default 
 (setq resize-mini-windows nil);;Mini buffer won't resize automaticly
+
 
 (global-set-key [f12] (quote shell));;press f12 enter to shell mode
 (global-set-key (kbd "\C-h") 'backward-delete-char) ;;C-h to delete a char as backspace
