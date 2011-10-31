@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/emacs/site-lisp/pde/lisp")
+
 ;;┃     __%%%(\        `%%%%%   .%%%%%         ┃ 
 ;;┃   /a  ^  '%        %%%% %: ,%  %%"`        ┃
 ;;┃  '__..  ,'%     .-%:     %-'    %          ┃
@@ -76,8 +78,4 @@
 (define-key global-map "\M-]" 'hs-show-block) ;;show sub
 
 
-(autoload 'perl-pod-preview "perl-pod-preview" nil t)
- (add-hook 'cperl-mode-hook
-           (lambda ()
-            (define-key cperl-mode-map [(meta o)] 'perl-pod-preview)))
 

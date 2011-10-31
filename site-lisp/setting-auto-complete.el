@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/emacs/site-lisp/auto-complete/")
 (require 'auto-complete)
 (require 'auto-complete-extension)
 

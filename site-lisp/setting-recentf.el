@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/emacs/site-lisp/recentf/")
 
 (require 'saveplace) ;;save last position of cursor
 (setq-default save-place t)

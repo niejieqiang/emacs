@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/emacs/site-lisp/color-theme/")
+
 (require 'color-theme)
 (eval-after-load "color-theme"
    '(progn

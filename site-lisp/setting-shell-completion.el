@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/emacs/site-lisp/shell-completion/")
+
 (eval-after-load "shell"
   '(progn
      (ansi-color-for-comint-mode-on)))
