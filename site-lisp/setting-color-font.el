@@ -1,7 +1,8 @@
-
-(require 'color-theme);;use my favourite theme
+(require 'color-theme)
+(eval-after-load "color-theme"
+   '(progn
 (color-theme-initialize)
-(color-theme-wombat)
+(color-theme-wombat)));;use my favourite theme
 
 (set-frame-font "Consolas-12");;
 (set-fontset-font "fontset-default" 'han '("Microsoft Yahei" . "unicode-bmp"))

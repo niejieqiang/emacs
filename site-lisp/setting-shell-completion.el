@@ -1,3 +1,7 @@
+(eval-after-load "shell"
+  '(progn
+     (ansi-color-for-comint-mode-on)))
+
 (require 'shell-completion)
 
 ;;                            _(\_/) 
@@ -20,7 +24,6 @@
 ;;    \_\     |_/          ||
 ;;    `'"                  \_\
 ;;                         `'"       `"".
-
 
 
 (add-hook 'shell-mode-hook 'wcy-shell-mode-hook-func);;quite shell mode after enter exit cmd

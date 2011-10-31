@@ -16,7 +16,8 @@
 ;;┃              ,-/ `           ,-/           ┃
 ;;┗━━━━━━━━━━━━━━━━━━━━━━┛ 
 
-
+(add-to-list 'auto-mode-alist '("\\.pl\\'" . cperl-mode))
+(autoload 'cperl-mode "cperl-mode" nil t)
 (load "pde-load")
 
 (setq cperl-highlight-variables-indiscriminately t)
@@ -45,7 +46,7 @@
                (auto-complete-mode )
 	       (perl-completion-mode )
 	       (hs-minor-mode )
-	    
+
                (make-variable-buffer-local 'ac-sources)
                (setq ac-sources
                      '(ac-source-perl-completion
@@ -73,3 +74,10 @@
 (define-key global-map "\M-'" 'hs-show-all) ;;M-' to show all fold
 (define-key global-map "\M-[" 'hs-hide-block) ;;hide sub
 (define-key global-map "\M-]" 'hs-show-block) ;;show sub
+
+
+(autoload 'perl-pod-preview "perl-pod-preview" nil t)
+ (add-hook 'cperl-mode-hook
+           (lambda ()
+            (define-key cperl-mode-map [(meta o)] 'perl-pod-preview)))
+

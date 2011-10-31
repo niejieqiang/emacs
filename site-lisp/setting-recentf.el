@@ -4,8 +4,6 @@
 (setq save-place-file "~/.emacs.d/.emacs-places")
 
 (require 'recentf)
-(setq tramp-default-method "ftp")
-
 
 (require 'recentf-ext)
 
