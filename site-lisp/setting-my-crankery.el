@@ -67,7 +67,7 @@ scroll-conservatively 10000)
 
 (global-set-key [f12] (quote shell));;press f12 enter to shell mode
 (global-set-key (kbd "\C-h") 'backward-delete-char) ;;C-h to delete a char as backspace
-(global-set-key (kbd "M-SPC") 'set-mark-command) ;;C-h to delete a char as backspace
+(global-set-key (kbd "\C-j") 'set-mark-command) ;;C-h to delete a char as backspace
 
 (defalias 'eb 'eval-buffer)
 (defalias 'cr 'comment-region)

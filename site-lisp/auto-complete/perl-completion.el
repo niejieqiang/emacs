@@ -442,7 +442,7 @@ directory is added to PERL5LIB when invoke completion commands."
 
       ;; doc
       (define-key map (kbd "C-c d") 'plcmp-cmd-show-doc)
-      (define-key map (kbd "C-c s") 'plcmp-cmd-show-doc-at-point)
+;;      (define-key map (kbd "C-c s") 'plcmp-cmd-show-doc-at-point)
       (define-key map (kbd "C-c M") 'plcmp-cmd-menu)
 
       ;; other
